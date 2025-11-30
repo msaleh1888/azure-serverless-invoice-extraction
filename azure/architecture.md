@@ -8,11 +8,11 @@ This document describes the architecture of the **Azure Invoice Extraction Servi
 
 ```mermaid
 flowchart LR
-    A[Client<br/>(App / Script / Tool)] --> B[HTTP API<br/>/api/invoice-extractor]
-    B --> C[Azure Function<br/>invoice_extractor]
-    C --> D[Azure Document Intelligence<br/>Prebuilt Invoice Model]
+    A[Client: app or script] --> B[HTTP API: /api/invoice-extractor]
+    B --> C[Azure Function: invoice_extractor]
+    C --> D[Azure Document Intelligence: prebuilt invoice model]
     D --> C
-    C --> E[JSON Response<br/>Normalized Invoice Data]
+    C --> E[JSON response: normalized invoice data]
 ```
 
 ---
@@ -22,42 +22,42 @@ flowchart LR
 ```mermaid
 flowchart TB
 
-    subgraph ClientSide[Client Side]
-        C1[Client App / Script]
+    subgraph ClientSide
+        C1[Client app or script]
     end
 
-    subgraph AzureFunctionHost[Azure Functions Host (Local via Docker / Cloud)]
+    subgraph AzureFunctionHost
         direction TB
 
-        subgraph HttpLayer[HTTP Layer]
-            F1[HTTP Trigger<br/>invoice_extractor Function]
-            F2[Request Validation<br/>(Content-Type, non-empty body)]
+        subgraph HttpLayer
+            F1[HTTP trigger: invoice_extractor]
+            F2[Request validation: content type and non-empty body]
         end
 
-        subgraph LogicLayer[Business Logic Layer]
-            L1[extract_invoice.py<br/>(calls Document Intelligence)]
-            L2[normalize_output.py<br/>(maps fields to schema)]
+        subgraph LogicLayer
+            L1[extract_invoice.py: call Document Intelligence]
+            L2[normalize_output.py: map fields to schema]
         end
 
-        subgraph ConfigLayer[Configuration]
-            S1[local.settings.json<br/>(DOCINT_ENDPOINT, DOCINT_KEY)]
-            S2[Environment Variables<br/>(Azure / Docker)]
+        subgraph ConfigLayer
+            S1[local.settings.json: DOCINT_ENDPOINT, DOCINT_KEY]
+            S2[Environment variables: Azure or Docker]
         end
 
-        subgraph PythonDeps[Python Dependencies]
-            P1[.python_packages/lib/site-packages<br/>requests, python-dotenv]
+        subgraph PythonDeps
+            P1[Python packages: requests, python-dotenv]
         end
     end
 
-    subgraph AzureCognitive[Azure Document Intelligence]
-        D1[Prebuilt Invoice Model<br/>(formrecognizer/documentModels/prebuilt-invoice)]
+    subgraph AzureCognitive
+        D1[Azure Document Intelligence: prebuilt invoice model]
     end
 
     C1 -->|POST PDF /api/invoice-extractor| F1
     F1 --> F2
     F2 --> L1
-    L1 -->|REST API Call<br/>endpoint + key| D1
-    D1 -->|Raw JSON Result| L1
+    L1 -->|REST API call with endpoint and key| D1
+    D1 -->|Raw JSON result| L1
     L1 --> L2
     L2 -->|Normalized JSON| F1
     F1 -->|HTTP 200 + JSON| C1
