@@ -1,0 +1,31 @@
+{
+  "invoice_id": "INV-100",
+  "invoice_date": "2019-11-15",
+  "due_date": "2019-12-15",
+  "vendor_name": "CONTOSO LTD.",
+  "vendor_address": null,
+  "customer_name": "MICROSOFT CORPORATION",
+  "total_amount": 110.0,
+  "total_tax": 10.0,
+  "items": [
+    {
+      "description": "Consulting Services",
+      "quantity": 2,
+      "unit_price": 30.0,
+      "amount": 60.0
+    },
+    {
+      "description": "Document Fee",
+      "quantity": 3,
+      "unit_price": 10.0,
+      "amount": 30.0
+    },
+    {
+      "description": "Printing Fee",
+      "quantity": 10,
+      "unit_price": 1.0,
+      "amount": 10.0
+    }
+  ],
+  "confidence": 1
+}

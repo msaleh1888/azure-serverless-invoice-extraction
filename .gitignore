@@ -1,0 +1,35 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pdb
+
+# Virtual environments
+.env/
+.venv/
+venv/
+env/
+
+# Local environment files
+.env
+local.settings.json
+
+# Azure Functions local packages
+.python_packages/
+
+# VS Code / IDE configs
+.vscode/
+.idea/
+*.swp
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# PyCharm / JetBrains
+*.iml
+.idea/

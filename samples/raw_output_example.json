@@ -1,0 +1,6881 @@
+{
+  "status": "succeeded",
+  "createdDateTime": "2025-11-27T22:10:26Z",
+  "lastUpdatedDateTime": "2025-11-27T22:10:29Z",
+  "analyzeResult": {
+    "apiVersion": "2023-07-31",
+    "modelId": "prebuilt-invoice",
+    "stringIndexType": "textElements",
+    "content": "CONTOSO LTD.\nINVOICE\nContoso Headquarters\nINVOICE: INV-100\n123 456th St\nINVOICE DATE: 11/15/2019\nNew York, NY, 10001\nDUE DATE: 12/15/2019\nCUSTOMER NAME: MICROSOFT CORPORATION\nSERVICE PERIOD: 10/14/2019 - 11/14/2019\nCUSTOMER ID: CID-12345\nMicrosoft Corp\n123 Other St,\nRedmond WA, 98052\nBILL TO:\nSHIP TO:\nSERVICE ADDRESS:\nMicrosoft Finance\nMicrosoft Delivery\nMicrosoft Services\n123 Bill St,\n123 Ship St,\n123 Service St,\nRedmond WA, 98052\nRedmond WA, 98052\nRedmond WA, 98052\nSALESPERSON\nP.O. NUMBER\nREQUISITIONER\nSHIPPED VIA\nF.O.B. POINT\nTERMS\nPO-3333\nDATE\nITEM CODE\nDESCRIPTION\nQTY\nUM\nPRICE\nTAX\nAMOUNT\n3/4/2021\nA123\nConsulting Services\n2\nhours\n$30.00\n$6.00\n$60.00\n3/5/2021\nB456\nDocument Fee\n3\n$10.00\n$3.00\n$30.00\n3/6/2021\nC789\nPrinting Fee\n10\npages\n$1.00\n$1.00\n$10.00\nSUBTOTAL\n$100.00\nSALES TAX\n$10.00\nTOTAL\n$110.00\nPREVIOUS UNPAID BALANCE\n$500.00\nAMOUNT DUE\n$610.00\nTHANK YOU FOR YOUR BUSINESS!\nREMIT TO:\nContoso Billing\n123 Remit St\nNew York, NY, 10001",
+    "pages": [
+      {
+        "pageNumber": 1,
+        "angle": 0,
+        "width": 8.5,
+        "height": 11,
+        "unit": "inch",
+        "words": [
+          {
+            "content": "CONTOSO",
+            "polygon": [
+              0.5778,
+              0.6589,
+              1.7,
+              0.6541,
+              1.7048,
+              0.8976,
+              0.5778,
+              0.888
+            ],
+            "confidence": 0.995,
+            "span": {
+              "offset": 0,
+              "length": 7
+            }
+          },
+          {
+            "content": "LTD.",
+            "polygon": [
+              1.8098,
+              0.6541,
+              2.3303,
+              0.6493,
+              2.3351,
+              0.9023,
+              1.8146,
+              0.8976
+            ],
+            "confidence": 0.991,
+            "span": {
+              "offset": 8,
+              "length": 4
+            }
+          },
+          {
+            "content": "INVOICE",
+            "polygon": [
+              7.0626,
+              0.5729,
+              7.989,
+              0.5681,
+              7.9938,
+              0.7878,
+              7.0579,
+              0.7878
+            ],
+            "confidence": 0.995,
+            "span": {
+              "offset": 13,
+              "length": 7
+            }
+          },
+          {
+            "content": "Contoso",
+            "polygon": [
+              0.5778,
+              1.4036,
+              1.127,
+              1.4036,
+              1.1222,
+              1.5755,
+              0.573,
+              1.5707
+            ],
+            "confidence": 0.994,
+            "span": {
+              "offset": 21,
+              "length": 7
+            }
+          },
+          {
+            "content": "Headquarters",
+            "polygon": [
+              1.1604,
+              1.4036,
+              2.1154,
+              1.4036,
+              2.1154,
+              1.5755,
+              1.1556,
+              1.5755
+            ],
+            "confidence": 0.992,
+            "span": {
+              "offset": 29,
+              "length": 12
+            }
+          },
+          {
+            "content": "INVOICE:",
+            "polygon": [
+              6.843,
+              1.3941,
+              7.4351,
+              1.3989,
+              7.4351,
+              1.5421,
+              6.8478,
+              1.5421
+            ],
+            "confidence": 0.974,
+            "span": {
+              "offset": 42,
+              "length": 8
+            }
+          },
+          {
+            "content": "INV-100",
+            "polygon": [
+              7.4638,
+              1.3989,
+              7.9938,
+              1.3941,
+              7.9986,
+              1.5469,
+              7.4638,
+              1.5421
+            ],
+            "confidence": 0.994,
+            "span": {
+              "offset": 51,
+              "length": 7
+            }
+          },
+          {
+            "content": "123",
+            "polygon": [
+              0.5874,
+              1.6042,
+              0.8261,
+              1.6042,
+              0.8261,
+              1.7713,
+              0.5874,
+              1.7713
+            ],
+            "confidence": 0.997,
+            "span": {
+              "offset": 59,
+              "length": 3
+            }
+          },
+          {
+            "content": "456th",
+            "polygon": [
+              0.8596,
+              1.6042,
+              1.2129,
+              1.6042,
+              1.2177,
+              1.7713,
+              0.8596,
+              1.7713
+            ],
+            "confidence": 0.976,
+            "span": {
+              "offset": 63,
+              "length": 5
+            }
+          },
+          {
+            "content": "St",
+            "polygon": [
+              1.2463,
+              1.6042,
+              1.3896,
+              1.6089,
+              1.3944,
+              1.7713,
+              1.2511,
+              1.7713
+            ],
+            "confidence": 0.995,
+            "span": {
+              "offset": 69,
+              "length": 2
+            }
+          },
+          {
+            "content": "INVOICE",
+            "polygon": [
+              6.2079,
+              1.5994,
+              6.757,
+              1.5994,
+              6.7618,
+              1.7522,
+              6.2126,
+              1.7426
+            ],
+            "confidence": 0.995,
+            "span": {
+              "offset": 72,
+              "length": 7
+            }
+          },
+          {
+            "content": "DATE:",
+            "polygon": [
+              6.7857,
+              1.5994,
+              7.2202,
+              1.5994,
+              7.2202,
+              1.7569,
+              6.7904,
+              1.7522
+            ],
+            "confidence": 0.993,
+            "span": {
+              "offset": 80,
+              "length": 5
+            }
+          },
+          {
+            "content": "11/15/2019",
+            "polygon": [
+              7.2489,
+              1.5994,
+              7.9986,
+              1.5946,
+              7.9986,
+              1.7522,
+              7.2489,
+              1.7569
+            ],
+            "confidence": 0.988,
+            "span": {
+              "offset": 86,
+              "length": 10
+            }
+          },
+          {
+            "content": "New",
+            "polygon": [
+              0.5683,
+              1.8142,
+              0.8404,
+              1.8142,
+              0.8452,
+              1.9766,
+              0.573,
+              1.9766
+            ],
+            "confidence": 0.996,
+            "span": {
+              "offset": 97,
+              "length": 3
+            }
+          },
+          {
+            "content": "York,",
+            "polygon": [
+              0.9169,
+              1.8095,
+              1.2607,
+              1.8095,
+              1.2654,
+              1.9766,
+              0.9216,
+              1.9766
+            ],
+            "confidence": 0.995,
+            "span": {
+              "offset": 101,
+              "length": 5
+            }
+          },
+          {
+            "content": "NY,",
+            "polygon": [
+              1.2941,
+              1.8095,
+              1.5472,
+              1.8095,
+              1.5472,
+              1.9766,
+              1.2941,
+              1.9766
+            ],
+            "confidence": 0.985,
+            "span": {
+              "offset": 107,
+              "length": 3
+            }
+          },
+          {
+            "content": "10001",
+            "polygon": [
+              1.5806,
+              1.8047,
+              1.9913,
+              1.8095,
+              1.9913,
+              1.9813,
+              1.5806,
+              1.9766
+            ],
+            "confidence": 0.994,
+            "span": {
+              "offset": 111,
+              "length": 5
+            }
+          },
+          {
+            "content": "DUE",
+            "polygon": [
+              6.4801,
+              1.8095,
+              6.7618,
+              1.8095,
+              6.7618,
+              1.9527,
+              6.4801,
+              1.9527
+            ],
+            "confidence": 0.996,
+            "span": {
+              "offset": 117,
+              "length": 3
+            }
+          },
+          {
+            "content": "DATE:",
+            "polygon": [
+              6.7904,
+              1.8095,
+              7.2107,
+              1.8047,
+              7.2107,
+              1.9527,
+              6.7904,
+              1.9527
+            ],
+            "confidence": 0.993,
+            "span": {
+              "offset": 121,
+              "length": 5
+            }
+          },
+          {
+            "content": "12/15/2019",
+            "polygon": [
+              7.2393,
+              1.8047,
+              7.9938,
+              1.7999,
+              7.9938,
+              1.9527,
+              7.2393,
+              1.9527
+            ],
+            "confidence": 0.991,
+            "span": {
+              "offset": 127,
+              "length": 10
+            }
+          },
+          {
+            "content": "CUSTOMER",
+            "polygon": [
+              4.9424,
+              2.01,
+              5.6683,
+              2.01,
+              5.673,
+              2.1675,
+              4.9424,
+              2.1723
+            ],
+            "confidence": 0.995,
+            "span": {
+              "offset": 138,
+              "length": 8
+            }
+          },
+          {
+            "content": "NAME:",
+            "polygon": [
+              5.7112,
+              2.01,
+              6.1792,
+              2.0148,
+              6.1792,
+              2.1628,
+              5.7112,
+              2.1675
+            ],
+            "confidence": 0.993,
+            "span": {
+              "offset": 147,
+              "length": 5
+            }
+          },
+          {
+            "content": "MICROSOFT",
+            "polygon": [
+              6.2079,
+              2.0148,
+              6.9958,
+              2.0148,
+              6.9958,
+              2.1628,
+              6.2079,
+              2.1628
+            ],
+            "confidence": 0.993,
+            "span": {
+              "offset": 153,
+              "length": 9
+            }
+          },
+          {
+            "content": "CORPORATION",
+            "polygon": [
+              7.0292,
+              2.0148,
+              7.9652,
+              2.0148,
+              7.9652,
+              2.1628,
+              7.0244,
+              2.1628
+            ],
+            "confidence": 0.993,
+            "span": {
+              "offset": 163,
+              "length": 11
+            }
+          },
+          {
+            "content": "SERVICE",
+            "polygon": [
+              5.1573,
+              2.2153,
+              5.6921,
+              2.2153,
+              5.6969,
+              2.3681,
+              5.1573,
+              2.3633
+            ],
+            "confidence": 0.995,
+            "span": {
+              "offset": 175,
+              "length": 7
+            }
+          },
+          {
+            "content": "PERIOD:",
+            "polygon": [
+              5.7256,
+              2.2153,
+              6.2938,
+              2.2153,
+              6.2986,
+              2.3681,
+              5.7256,
+              2.3681
+            ],
+            "confidence": 0.993,
+            "span": {
+              "offset": 183,
+              "length": 7
+            }
+          },
+          {
+            "content": "10/14/2019",
+            "polygon": [
+              6.3225,
+              2.2153,
+              7.077,
+              2.2153,
+              7.077,
+              2.3681,
+              6.3272,
+              2.3681
+            ],
+            "confidence": 0.994,
+            "span": {
+              "offset": 191,
+              "length": 10
+            }
+          },
+          {
+            "content": "-",
+            "polygon": [
+              7.1056,
+              2.2153,
+              7.1868,
+              2.2153,
+              7.1916,
+              2.3681,
+              7.1104,
+              2.3681
+            ],
+            "confidence": 0.995,
+            "span": {
+              "offset": 202,
+              "length": 1
+            }
+          },
+          {
+            "content": "11/14/2019",
+            "polygon": [
+              7.2489,
+              2.2153,
+              7.9986,
+              2.2153,
+              8.0034,
+              2.3681,
+              7.2489,
+              2.3681
+            ],
+            "confidence": 0.961,
+            "span": {
+              "offset": 204,
+              "length": 10
+            }
+          },
+          {
+            "content": "CUSTOMER",
+            "polygon": [
+              6.3177,
+              2.4253,
+              7.0483,
+              2.4253,
+              7.0483,
+              2.5734,
+              6.3177,
+              2.5734
+            ],
+            "confidence": 0.995,
+            "span": {
+              "offset": 215,
+              "length": 8
+            }
+          },
+          {
+            "content": "ID:",
+            "polygon": [
+              7.0865,
+              2.4253,
+              7.2919,
+              2.4253,
+              7.2919,
+              2.5734,
+              7.0865,
+              2.5734
+            ],
+            "confidence": 0.995,
+            "span": {
+              "offset": 224,
+              "length": 3
+            }
+          },
+          {
+            "content": "CID-12345",
+            "polygon": [
+              7.3205,
+              2.4253,
+              8.0034,
+              2.4206,
+              7.9986,
+              2.5734,
+              7.3205,
+              2.5734
+            ],
+            "confidence": 0.992,
+            "span": {
+              "offset": 228,
+              "length": 9
+            }
+          },
+          {
+            "content": "Microsoft",
+            "polygon": [
+              0.573,
+              2.6306,
+              1.2416,
+              2.6354,
+              1.2416,
+              2.7977,
+              0.573,
+              2.7834
+            ],
+            "confidence": 0.993,
+            "span": {
+              "offset": 238,
+              "length": 9
+            }
+          },
+          {
+            "content": "Corp",
+            "polygon": [
+              1.275,
+              2.6354,
+              1.5806,
+              2.6306,
+              1.5758,
+              2.7977,
+              1.275,
+              2.7977
+            ],
+            "confidence": 0.993,
+            "span": {
+              "offset": 248,
+              "length": 4
+            }
+          },
+          {
+            "content": "123",
+            "polygon": [
+              0.5874,
+              2.8359,
+              0.8261,
+              2.8359,
+              0.8309,
+              2.9887,
+              0.5921,
+              2.9839
+            ],
+            "confidence": 0.994,
+            "span": {
+              "offset": 253,
+              "length": 3
+            }
+          },
+          {
+            "content": "Other",
+            "polygon": [
+              0.8596,
+              2.8359,
+              1.2654,
+              2.8312,
+              1.2654,
+              2.9935,
+              0.8596,
+              2.9887
+            ],
+            "confidence": 0.995,
+            "span": {
+              "offset": 257,
+              "length": 5
+            }
+          },
+          {
+            "content": "St,",
+            "polygon": [
+              1.2941,
+              2.8312,
+              1.4756,
+              2.8312,
+              1.4756,
+              2.9935,
+              1.2941,
+              2.9935
+            ],
+            "confidence": 0.993,
+            "span": {
+              "offset": 263,
+              "length": 3
+            }
+          },
+          {
+            "content": "Redmond",
+            "polygon": [
+              0.5683,
+              3.0365,
+              1.2225,
+              3.0317,
+              1.2225,
+              3.2036,
+              0.5683,
+              3.2036
+            ],
+            "confidence": 0.995,
+            "span": {
+              "offset": 267,
+              "length": 7
+            }
+          },
+          {
+            "content": "WA,",
+            "polygon": [
+              1.2654,
+              3.0317,
+              1.5567,
+              3.0317,
+              1.5567,
+              3.2036,
+              1.2654,
+              3.2036
+            ],
+            "confidence": 0.995,
+            "span": {
+              "offset": 275,
+              "length": 3
+            }
+          },
+          {
+            "content": "98052",
+            "polygon": [
+              1.5902,
+              3.0317,
+              2.0152,
+              3.0269,
+              2.0152,
+              3.1988,
+              1.5902,
+              3.2036
+            ],
+            "confidence": 0.995,
+            "span": {
+              "offset": 279,
+              "length": 5
+            }
+          },
+          {
+            "content": "BILL",
+            "polygon": [
+              0.5683,
+              3.5378,
+              0.8452,
+              3.5378,
+              0.85,
+              3.681,
+              0.573,
+              3.6762
+            ],
+            "confidence": 0.979,
+            "span": {
+              "offset": 285,
+              "length": 4
+            }
+          },
+          {
+            "content": "TO:",
+            "polygon": [
+              0.8834,
+              3.5378,
+              1.1126,
+              3.5378,
+              1.1126,
+              3.681,
+              0.8882,
+              3.681
+            ],
+            "confidence": 0.995,
+            "span": {
+              "offset": 290,
+              "length": 3
+            }
+          },
+          {
+            "content": "SHIP",
+            "polygon": [
+              3.3236,
+              3.5378,
+              3.6197,
+              3.5378,
+              3.6244,
+              3.681,
+              3.3236,
+              3.681
+            ],
+            "confidence": 0.986,
+            "span": {
+              "offset": 294,
+              "length": 4
+            }
+          },
+          {
+            "content": "TO:",
+            "polygon": [
+              3.677,
+              3.5378,
+              3.911,
+              3.5378,
+              3.911,
+              3.6858,
+              3.6817,
+              3.681
+            ],
+            "confidence": 0.995,
+            "span": {
+              "offset": 299,
+              "length": 3
+            }
+          },
+          {
+            "content": "SERVICE",
+            "polygon": [
+              6.1888,
+              3.5282,
+              6.7427,
+              3.5282,
+              6.7427,
+              3.6905,
+              6.1888,
+              3.6905
+            ],
+            "confidence": 0.961,
+            "span": {
+              "offset": 303,
+              "length": 7
+            }
+          },
+          {
+            "content": "ADDRESS:",
+            "polygon": [
+              6.7713,
+              3.5282,
+              7.4303,
+              3.5282,
+              7.4351,
+              3.6905,
+              6.7761,
+              3.6905
+            ],
+            "confidence": 0.989,
+            "span": {
+              "offset": 311,
+              "length": 8
+            }
+          },
+          {
+            "content": "Microsoft",
+            "polygon": [
+              0.5683,
+              3.7478,
+              1.2368,
+              3.7478,
+              1.2368,
+              3.9006,
+              0.5778,
+              3.9006
+            ],
+            "confidence": 0.994,
+            "span": {
+              "offset": 320,
+              "length": 9
+            }
+          },
+          {
+            "content": "Finance",
+            "polygon": [
+              1.2654,
+              3.7478,
+              1.7907,
+              3.7478,
+              1.7907,
+              3.9054,
+              1.2654,
+              3.9006
+            ],
+            "confidence": 0.995,
+            "span": {
+              "offset": 330,
+              "length": 7
+            }
+          },
+          {
+            "content": "Microsoft",
+            "polygon": [
+              3.3093,
+              3.7383,
+              3.9874,
+              3.7431,
+              3.9826,
+              3.9149,
+              3.3093,
+              3.9054
+            ],
+            "confidence": 0.993,
+            "span": {
+              "offset": 338,
+              "length": 9
+            }
+          },
+          {
+            "content": "Delivery",
+            "polygon": [
+              4.0208,
+              3.7431,
+              4.5843,
+              3.7478,
+              4.5843,
+              3.9245,
+              4.016,
+              3.9149
+            ],
+            "confidence": 0.995,
+            "span": {
+              "offset": 348,
+              "length": 8
+            }
+          },
+          {
+            "content": "Microsoft",
+            "polygon": [
+              6.1983,
+              3.7478,
+              6.8621,
+              3.7478,
+              6.8669,
+              3.9006,
+              6.1983,
+              3.9054
+            ],
+            "confidence": 0.989,
+            "span": {
+              "offset": 357,
+              "length": 9
+            }
+          },
+          {
+            "content": "Services",
+            "polygon": [
+              6.8955,
+              3.7478,
+              7.4542,
+              3.7478,
+              7.4542,
+              3.9054,
+              6.8955,
+              3.9006
+            ],
+            "confidence": 0.994,
+            "span": {
+              "offset": 367,
+              "length": 8
+            }
+          },
+          {
+            "content": "123",
+            "polygon": [
+              0.5826,
+              3.9579,
+              0.8261,
+              3.9579,
+              0.8261,
+              4.1155,
+              0.5874,
+              4.1107
+            ],
+            "confidence": 0.996,
+            "span": {
+              "offset": 376,
+              "length": 3
+            }
+          },
+          {
+            "content": "Bill",
+            "polygon": [
+              0.8691,
+              3.9579,
+              1.084,
+              3.9579,
+              1.0792,
+              4.1155,
+              0.8691,
+              4.1155
+            ],
+            "confidence": 0.993,
+            "span": {
+              "offset": 380,
+              "length": 4
+            }
+          },
+          {
+            "content": "St,",
+            "polygon": [
+              1.1126,
+              3.9579,
+              1.2893,
+              3.9579,
+              1.2846,
+              4.1107,
+              1.1126,
+              4.1155
+            ],
+            "confidence": 0.995,
+            "span": {
+              "offset": 385,
+              "length": 3
+            }
+          },
+          {
+            "content": "123",
+            "polygon": [
+              3.3379,
+              3.9579,
+              3.5767,
+              3.9579,
+              3.5767,
+              4.1202,
+              3.3379,
+              4.1155
+            ],
+            "confidence": 0.997,
+            "span": {
+              "offset": 389,
+              "length": 3
+            }
+          },
+          {
+            "content": "Ship",
+            "polygon": [
+              3.6101,
+              3.9579,
+              3.9014,
+              3.9531,
+              3.8966,
+              4.125,
+              3.6101,
+              4.1202
+            ],
+            "confidence": 0.993,
+            "span": {
+              "offset": 393,
+              "length": 4
+            }
+          },
+          {
+            "content": "St,",
+            "polygon": [
+              3.9444,
+              3.9531,
+              4.1211,
+              3.9531,
+              4.1163,
+              4.125,
+              3.9396,
+              4.125
+            ],
+            "confidence": 0.995,
+            "span": {
+              "offset": 398,
+              "length": 3
+            }
+          },
+          {
+            "content": "123",
+            "polygon": [
+              6.2126,
+              3.9531,
+              6.4419,
+              3.9531,
+              6.4419,
+              4.1155,
+              6.2126,
+              4.1107
+            ],
+            "confidence": 0.997,
+            "span": {
+              "offset": 402,
+              "length": 3
+            }
+          },
+          {
+            "content": "Service",
+            "polygon": [
+              6.4848,
+              3.9531,
+              6.9719,
+              3.9579,
+              6.9719,
+              4.1107,
+              6.4848,
+              4.1155
+            ],
+            "confidence": 0.995,
+            "span": {
+              "offset": 406,
+              "length": 7
+            }
+          },
+          {
+            "content": "St,",
+            "polygon": [
+              7.0149,
+              3.9579,
+              7.1868,
+              3.9627,
+              7.1868,
+              4.1059,
+              7.0101,
+              4.1107
+            ],
+            "confidence": 0.995,
+            "span": {
+              "offset": 414,
+              "length": 3
+            }
+          },
+          {
+            "content": "Redmond",
+            "polygon": [
+              0.5683,
+              4.1489,
+              1.2177,
+              4.1489,
+              1.2225,
+              4.316,
+              0.5683,
+              4.3064
+            ],
+            "confidence": 0.995,
+            "span": {
+              "offset": 418,
+              "length": 7
+            }
+          },
+          {
+            "content": "WA,",
+            "polygon": [
+              1.2607,
+              4.1489,
+              1.5615,
+              4.1489,
+              1.5663,
+              4.316,
+              1.2654,
+              4.316
+            ],
+            "confidence": 0.995,
+            "span": {
+              "offset": 426,
+              "length": 3
+            }
+          },
+          {
+            "content": "98052",
+            "polygon": [
+              1.5949,
+              4.1489,
+              2.0152,
+              4.1489,
+              2.0152,
+              4.3112,
+              1.5949,
+              4.316
+            ],
+            "confidence": 0.995,
+            "span": {
+              "offset": 430,
+              "length": 5
+            }
+          },
+          {
+            "content": "Redmond",
+            "polygon": [
+              3.3188,
+              4.1489,
+              3.973,
+              4.1489,
+              3.973,
+              4.3112,
+              3.3188,
+              4.3064
+            ],
+            "confidence": 0.995,
+            "span": {
+              "offset": 436,
+              "length": 7
+            }
+          },
+          {
+            "content": "WA,",
+            "polygon": [
+              4.016,
+              4.1489,
+              4.3121,
+              4.1489,
+              4.3121,
+              4.316,
+              4.016,
+              4.316
+            ],
+            "confidence": 0.995,
+            "span": {
+              "offset": 444,
+              "length": 3
+            }
+          },
+          {
+            "content": "98052",
+            "polygon": [
+              4.3455,
+              4.1489,
+              4.7657,
+              4.1441,
+              4.7657,
+              4.3112,
+              4.3455,
+              4.316
+            ],
+            "confidence": 0.995,
+            "span": {
+              "offset": 448,
+              "length": 5
+            }
+          },
+          {
+            "content": "Redmond",
+            "polygon": [
+              6.1935,
+              4.1536,
+              6.843,
+              4.1536,
+              6.8478,
+              4.316,
+              6.1983,
+              4.3064
+            ],
+            "confidence": 0.995,
+            "span": {
+              "offset": 454,
+              "length": 7
+            }
+          },
+          {
+            "content": "WA,",
+            "polygon": [
+              6.8955,
+              4.1536,
+              7.182,
+              4.1489,
+              7.1868,
+              4.316,
+              6.9003,
+              4.316
+            ],
+            "confidence": 0.995,
+            "span": {
+              "offset": 462,
+              "length": 3
+            }
+          },
+          {
+            "content": "98052",
+            "polygon": [
+              7.2154,
+              4.1489,
+              7.6452,
+              4.1441,
+              7.65,
+              4.316,
+              7.2202,
+              4.316
+            ],
+            "confidence": 0.995,
+            "span": {
+              "offset": 466,
+              "length": 5
+            }
+          },
+          {
+            "content": "SALESPERSON",
+            "polygon": [
+              0.6876,
+              4.6263,
+              1.5854,
+              4.6359,
+              1.5854,
+              4.7695,
+              0.6876,
+              4.7791
+            ],
+            "confidence": 0.993,
+            "span": {
+              "offset": 472,
+              "length": 11
+            }
+          },
+          {
+            "content": "P.O.",
+            "polygon": [
+              2.1059,
+              4.6311,
+              2.3876,
+              4.6263,
+              2.3876,
+              4.7695,
+              2.1107,
+              4.7695
+            ],
+            "confidence": 0.992,
+            "span": {
+              "offset": 484,
+              "length": 4
+            }
+          },
+          {
+            "content": "NUMBER",
+            "polygon": [
+              2.4115,
+              4.6263,
+              3.0084,
+              4.6311,
+              3.0084,
+              4.7695,
+              2.4163,
+              4.7695
+            ],
+            "confidence": 0.995,
+            "span": {
+              "offset": 489,
+              "length": 6
+            }
+          },
+          {
+            "content": "REQUISITIONER",
+            "polygon": [
+              3.4716,
+              4.6263,
+              4.5126,
+              4.6263,
+              4.5126,
+              4.7791,
+              3.4764,
+              4.7743
+            ],
+            "confidence": 0.993,
+            "span": {
+              "offset": 496,
+              "length": 13
+            }
+          },
+          {
+            "content": "SHIPPED",
+            "polygon": [
+              4.7992,
+              4.6311,
+              5.3388,
+              4.6311,
+              5.3435,
+              4.7695,
+              4.8039,
+              4.7695
+            ],
+            "confidence": 0.995,
+            "span": {
+              "offset": 510,
+              "length": 7
+            }
+          },
+          {
+            "content": "VIA",
+            "polygon": [
+              5.4056,
+              4.6311,
+              5.611,
+              4.6311,
+              5.611,
+              4.7695,
+              5.4056,
+              4.7695
+            ],
+            "confidence": 0.996,
+            "span": {
+              "offset": 518,
+              "length": 3
+            }
+          },
+          {
+            "content": "F.O.B.",
+            "polygon": [
+              5.8497,
+              4.6359,
+              6.2556,
+              4.6311,
+              6.2604,
+              4.7695,
+              5.8497,
+              4.7695
+            ],
+            "confidence": 0.993,
+            "span": {
+              "offset": 522,
+              "length": 6
+            }
+          },
+          {
+            "content": "POINT",
+            "polygon": [
+              6.2843,
+              4.6311,
+              6.7045,
+              4.6263,
+              6.7045,
+              4.7743,
+              6.2843,
+              4.7743
+            ],
+            "confidence": 0.993,
+            "span": {
+              "offset": 529,
+              "length": 5
+            }
+          },
+          {
+            "content": "TERMS",
+            "polygon": [
+              7.1772,
+              4.6359,
+              7.6309,
+              4.6311,
+              7.6309,
+              4.7695,
+              7.182,
+              4.7648
+            ],
+            "confidence": 0.994,
+            "span": {
+              "offset": 535,
+              "length": 5
+            }
+          },
+          {
+            "content": "PO-3333",
+            "polygon": [
+              1.8862,
+              4.9128,
+              2.4784,
+              4.9032,
+              2.4784,
+              5.056,
+              1.8862,
+              5.056
+            ],
+            "confidence": 0.961,
+            "span": {
+              "offset": 541,
+              "length": 7
+            }
+          },
+          {
+            "content": "DATE",
+            "polygon": [
+              0.7258,
+              5.4045,
+              1.0744,
+              5.3997,
+              1.0744,
+              5.5286,
+              0.7258,
+              5.5334
+            ],
+            "confidence": 0.993,
+            "span": {
+              "offset": 549,
+              "length": 4
+            }
+          },
+          {
+            "content": "ITEM",
+            "polygon": [
+              1.3944,
+              5.3997,
+              1.6713,
+              5.3997,
+              1.6713,
+              5.5382,
+              1.3944,
+              5.5382
+            ],
+            "confidence": 0.991,
+            "span": {
+              "offset": 554,
+              "length": 4
+            }
+          },
+          {
+            "content": "CODE",
+            "polygon": [
+              1.7812,
+              5.3997,
+              2.1441,
+              5.3997,
+              2.1441,
+              5.5382,
+              1.7812,
+              5.5382
+            ],
+            "confidence": 0.982,
+            "span": {
+              "offset": 559,
+              "length": 4
+            }
+          },
+          {
+            "content": "DESCRIPTION",
+            "polygon": [
+              2.8365,
+              5.3997,
+              3.6865,
+              5.3997,
+              3.6865,
+              5.5382,
+              2.8365,
+              5.5382
+            ],
+            "confidence": 0.993,
+            "span": {
+              "offset": 564,
+              "length": 11
+            }
+          },
+          {
+            "content": "QTY",
+            "polygon": [
+              4.3933,
+              5.4045,
+              4.6607,
+              5.4045,
+              4.6607,
+              5.5382,
+              4.3933,
+              5.5382
+            ],
+            "confidence": 0.995,
+            "span": {
+              "offset": 576,
+              "length": 3
+            }
+          },
+          {
+            "content": "UM",
+            "polygon": [
+              5.0331,
+              5.3997,
+              5.2051,
+              5.3997,
+              5.2051,
+              5.5334,
+              5.0331,
+              5.5286
+            ],
+            "confidence": 0.995,
+            "span": {
+              "offset": 580,
+              "length": 2
+            }
+          },
+          {
+            "content": "PRICE",
+            "polygon": [
+              5.8402,
+              5.4045,
+              6.2126,
+              5.3997,
+              6.2174,
+              5.5334,
+              5.8449,
+              5.5286
+            ],
+            "confidence": 0.995,
+            "span": {
+              "offset": 583,
+              "length": 5
+            }
+          },
+          {
+            "content": "TAX",
+            "polygon": [
+              6.7236,
+              5.3997,
+              6.9624,
+              5.3997,
+              6.9624,
+              5.5286,
+              6.7236,
+              5.5286
+            ],
+            "confidence": 0.995,
+            "span": {
+              "offset": 589,
+              "length": 3
+            }
+          },
+          {
+            "content": "AMOUNT",
+            "polygon": [
+              7.2823,
+              5.4045,
+              7.9031,
+              5.395,
+              7.9031,
+              5.543,
+              7.2871,
+              5.5334
+            ],
+            "confidence": 0.995,
+            "span": {
+              "offset": 593,
+              "length": 6
+            }
+          },
+          {
+            "content": "3/4/2021",
+            "polygon": [
+              0.573,
+              5.6671,
+              1.2177,
+              5.6623,
+              1.2177,
+              5.8342,
+              0.573,
+              5.839
+            ],
+            "confidence": 0.995,
+            "span": {
+              "offset": 600,
+              "length": 8
+            }
+          },
+          {
+            "content": "A123",
+            "polygon": [
+              1.6045,
+              5.6719,
+              1.9435,
+              5.6719,
+              1.9435,
+              5.8151,
+              1.5997,
+              5.8151
+            ],
+            "confidence": 0.993,
+            "span": {
+              "offset": 609,
+              "length": 4
+            }
+          },
+          {
+            "content": "Consulting",
+            "polygon": [
+              2.3256,
+              5.6719,
+              3.0514,
+              5.6767,
+              3.0514,
+              5.8342,
+              2.3256,
+              5.839
+            ],
+            "confidence": 0.979,
+            "span": {
+              "offset": 614,
+              "length": 10
+            }
+          },
+          {
+            "content": "Services",
+            "polygon": [
+              3.0848,
+              5.6767,
+              3.634,
+              5.6767,
+              3.6292,
+              5.8294,
+              3.0801,
+              5.8342
+            ],
+            "confidence": 0.994,
+            "span": {
+              "offset": 625,
+              "length": 8
+            }
+          },
+          {
+            "content": "2",
+            "polygon": [
+              4.5986,
+              5.6767,
+              4.6607,
+              5.6767,
+              4.6559,
+              5.8056,
+              4.5938,
+              5.8056
+            ],
+            "confidence": 0.996,
+            "span": {
+              "offset": 634,
+              "length": 1
+            }
+          },
+          {
+            "content": "hours",
+            "polygon": [
+              4.8183,
+              5.6767,
+              5.2146,
+              5.6767,
+              5.2146,
+              5.8151,
+              4.8183,
+              5.8151
+            ],
+            "confidence": 0.994,
+            "span": {
+              "offset": 636,
+              "length": 5
+            }
+          },
+          {
+            "content": "$30.00",
+            "polygon": [
+              5.9452,
+              5.6623,
+              6.4132,
+              5.6623,
+              6.4132,
+              5.8294,
+              5.9452,
+              5.8294
+            ],
+            "confidence": 0.995,
+            "span": {
+              "offset": 642,
+              "length": 6
+            }
+          },
+          {
+            "content": "$6.00",
+            "polygon": [
+              6.6902,
+              5.6671,
+              7.077,
+              5.6671,
+              7.077,
+              5.8247,
+              6.6902,
+              5.8294
+            ],
+            "confidence": 0.995,
+            "span": {
+              "offset": 649,
+              "length": 5
+            }
+          },
+          {
+            "content": "$60.00",
+            "polygon": [
+              7.4447,
+              5.6767,
+              7.9031,
+              5.6719,
+              7.9079,
+              5.8342,
+              7.4447,
+              5.8342
+            ],
+            "confidence": 0.992,
+            "span": {
+              "offset": 655,
+              "length": 6
+            }
+          },
+          {
+            "content": "3/5/2021",
+            "polygon": [
+              0.5778,
+              5.9631,
+              1.2272,
+              5.9583,
+              1.232,
+              6.1254,
+              0.5778,
+              6.1254
+            ],
+            "confidence": 0.995,
+            "span": {
+              "offset": 662,
+              "length": 8
+            }
+          },
+          {
+            "content": "B456",
+            "polygon": [
+              1.6045,
+              5.9727,
+              1.9388,
+              5.9727,
+              1.9388,
+              6.1111,
+              1.6045,
+              6.1111
+            ],
+            "confidence": 0.993,
+            "span": {
+              "offset": 671,
+              "length": 4
+            }
+          },
+          {
+            "content": "Document",
+            "polygon": [
+              2.3256,
+              5.9727,
+              3.0419,
+              5.9774,
+              3.0466,
+              6.1159,
+              2.3256,
+              6.1254
+            ],
+            "confidence": 0.992,
+            "span": {
+              "offset": 676,
+              "length": 8
+            }
+          },
+          {
+            "content": "Fee",
+            "polygon": [
+              3.0705,
+              5.9774,
+              3.3045,
+              5.9774,
+              3.3045,
+              6.1111,
+              3.0705,
+              6.1159
+            ],
+            "confidence": 0.996,
+            "span": {
+              "offset": 685,
+              "length": 3
+            }
+          },
+          {
+            "content": "3",
+            "polygon": [
+              4.589,
+              5.9774,
+              4.6559,
+              5.9774,
+              4.6559,
+              6.1016,
+              4.589,
+              6.1016
+            ],
+            "confidence": 0.995,
+            "span": {
+              "offset": 689,
+              "length": 1
+            }
+          },
+          {
+            "content": "$10.00",
+            "polygon": [
+              5.9404,
+              5.9679,
+              6.4132,
+              5.9679,
+              6.4132,
+              6.1159,
+              5.9452,
+              6.1254
+            ],
+            "confidence": 0.995,
+            "span": {
+              "offset": 691,
+              "length": 6
+            }
+          },
+          {
+            "content": "$3.00",
+            "polygon": [
+              6.6949,
+              5.9583,
+              7.0817,
+              5.9583,
+              7.0817,
+              6.1207,
+              6.6949,
+              6.1207
+            ],
+            "confidence": 0.995,
+            "span": {
+              "offset": 698,
+              "length": 5
+            }
+          },
+          {
+            "content": "$30.00",
+            "polygon": [
+              7.4494,
+              5.9679,
+              7.9079,
+              5.9631,
+              7.9031,
+              6.1207,
+              7.4494,
+              6.1207
+            ],
+            "confidence": 0.994,
+            "span": {
+              "offset": 704,
+              "length": 6
+            }
+          },
+          {
+            "content": "3/6/2021",
+            "polygon": [
+              0.5778,
+              6.2687,
+              1.2177,
+              6.2639,
+              1.2177,
+              6.4214,
+              0.5778,
+              6.4262
+            ],
+            "confidence": 0.99,
+            "span": {
+              "offset": 711,
+              "length": 8
+            }
+          },
+          {
+            "content": "C789",
+            "polygon": [
+              1.6045,
+              6.2687,
+              1.9388,
+              6.2687,
+              1.9388,
+              6.4167,
+              1.5997,
+              6.4167
+            ],
+            "confidence": 0.992,
+            "span": {
+              "offset": 720,
+              "length": 4
+            }
+          },
+          {
+            "content": "Printing",
+            "polygon": [
+              2.3208,
+              6.2734,
+              2.8508,
+              6.2734,
+              2.8508,
+              6.4405,
+              2.316,
+              6.4358
+            ],
+            "confidence": 0.994,
+            "span": {
+              "offset": 725,
+              "length": 8
+            }
+          },
+          {
+            "content": "Fee",
+            "polygon": [
+              2.8843,
+              6.2734,
+              3.1326,
+              6.2734,
+              3.1374,
+              6.4358,
+              2.8843,
+              6.4405
+            ],
+            "confidence": 0.994,
+            "span": {
+              "offset": 734,
+              "length": 3
+            }
+          },
+          {
+            "content": "10",
+            "polygon": [
+              4.5126,
+              6.2734,
+              4.6511,
+              6.2734,
+              4.6511,
+              6.4119,
+              4.5126,
+              6.4119
+            ],
+            "confidence": 0.998,
+            "span": {
+              "offset": 738,
+              "length": 2
+            }
+          },
+          {
+            "content": "pages",
+            "polygon": [
+              4.8183,
+              6.283,
+              5.2289,
+              6.283,
+              5.2289,
+              6.4453,
+              4.8183,
+              6.4453
+            ],
+            "confidence": 0.991,
+            "span": {
+              "offset": 741,
+              "length": 5
+            }
+          },
+          {
+            "content": "$1.00",
+            "polygon": [
+              6.0264,
+              6.2591,
+              6.4228,
+              6.2543,
+              6.4228,
+              6.4167,
+              6.0264,
+              6.4214
+            ],
+            "confidence": 0.993,
+            "span": {
+              "offset": 747,
+              "length": 5
+            }
+          },
+          {
+            "content": "$1.00",
+            "polygon": [
+              6.6902,
+              6.2639,
+              7.0626,
+              6.2639,
+              7.0626,
+              6.4167,
+              6.6902,
+              6.4167
+            ],
+            "confidence": 0.995,
+            "span": {
+              "offset": 753,
+              "length": 5
+            }
+          },
+          {
+            "content": "$10.00",
+            "polygon": [
+              7.4399,
+              6.2687,
+              7.8983,
+              6.2639,
+              7.9031,
+              6.4214,
+              7.4447,
+              6.4262
+            ],
+            "confidence": 0.995,
+            "span": {
+              "offset": 759,
+              "length": 6
+            }
+          },
+          {
+            "content": "SUBTOTAL",
+            "polygon": [
+              6.0169,
+              6.8845,
+              6.7331,
+              6.8893,
+              6.7331,
+              7.0421,
+              6.0169,
+              7.0421
+            ],
+            "confidence": 0.995,
+            "span": {
+              "offset": 766,
+              "length": 8
+            }
+          },
+          {
+            "content": "$100.00",
+            "polygon": [
+              7.3635,
+              6.8559,
+              7.9126,
+              6.8511,
+              7.9126,
+              7.0182,
+              7.3635,
+              7.0182
+            ],
+            "confidence": 0.993,
+            "span": {
+              "offset": 775,
+              "length": 7
+            }
+          },
+          {
+            "content": "SALES",
+            "polygon": [
+              6.0216,
+              7.1662,
+              6.4323,
+              7.171,
+              6.4323,
+              7.3429,
+              6.0216,
+              7.3381
+            ],
+            "confidence": 0.994,
+            "span": {
+              "offset": 783,
+              "length": 5
+            }
+          },
+          {
+            "content": "TAX",
+            "polygon": [
+              6.4657,
+              7.171,
+              6.7331,
+              7.171,
+              6.7379,
+              7.3381,
+              6.4657,
+              7.3429
+            ],
+            "confidence": 0.996,
+            "span": {
+              "offset": 789,
+              "length": 3
+            }
+          },
+          {
+            "content": "$10.00",
+            "polygon": [
+              7.4494,
+              7.1519,
+              7.9222,
+              7.1519,
+              7.927,
+              7.3142,
+              7.4494,
+              7.319
+            ],
+            "confidence": 0.995,
+            "span": {
+              "offset": 793,
+              "length": 6
+            }
+          },
+          {
+            "content": "TOTAL",
+            "polygon": [
+              6.2986,
+              7.4861,
+              6.7331,
+              7.4909,
+              6.7331,
+              7.6437,
+              6.3034,
+              7.6341
+            ],
+            "confidence": 0.995,
+            "span": {
+              "offset": 800,
+              "length": 5
+            }
+          },
+          {
+            "content": "$110.00",
+            "polygon": [
+              7.3683,
+              7.4575,
+              7.9174,
+              7.4527,
+              7.9174,
+              7.6198,
+              7.3683,
+              7.6246
+            ],
+            "confidence": 0.979,
+            "span": {
+              "offset": 806,
+              "length": 7
+            }
+          },
+          {
+            "content": "PREVIOUS",
+            "polygon": [
+              4.7848,
+              7.7773,
+              5.482,
+              7.7773,
+              5.482,
+              7.9397,
+              4.7848,
+              7.9349
+            ],
+            "confidence": 0.981,
+            "span": {
+              "offset": 814,
+              "length": 8
+            }
+          },
+          {
+            "content": "UNPAID",
+            "polygon": [
+              5.5154,
+              7.7773,
+              6.0455,
+              7.7773,
+              6.0455,
+              7.9397,
+              5.5154,
+              7.9397
+            ],
+            "confidence": 0.994,
+            "span": {
+              "offset": 823,
+              "length": 6
+            }
+          },
+          {
+            "content": "BALANCE",
+            "polygon": [
+              6.098,
+              7.7773,
+              6.7331,
+              7.7821,
+              6.7331,
+              7.9301,
+              6.098,
+              7.9349
+            ],
+            "confidence": 0.992,
+            "span": {
+              "offset": 830,
+              "length": 7
+            }
+          },
+          {
+            "content": "$500.00",
+            "polygon": [
+              7.3635,
+              7.7535,
+              7.9126,
+              7.7535,
+              7.9126,
+              7.911,
+              7.3635,
+              7.9158
+            ],
+            "confidence": 0.995,
+            "span": {
+              "offset": 838,
+              "length": 7
+            }
+          },
+          {
+            "content": "AMOUNT",
+            "polygon": [
+              5.759,
+              8.0686,
+              6.4084,
+              8.0781,
+              6.4084,
+              8.2261,
+              5.759,
+              8.2309
+            ],
+            "confidence": 0.995,
+            "span": {
+              "offset": 846,
+              "length": 6
+            }
+          },
+          {
+            "content": "DUE",
+            "polygon": [
+              6.4371,
+              8.0781,
+              6.7236,
+              8.0781,
+              6.7236,
+              8.2261,
+              6.4371,
+              8.2261
+            ],
+            "confidence": 0.996,
+            "span": {
+              "offset": 853,
+              "length": 3
+            }
+          },
+          {
+            "content": "$610.00",
+            "polygon": [
+              7.3635,
+              8.0447,
+              7.9222,
+              8.0495,
+              7.927,
+              8.2118,
+              7.3635,
+              8.2166
+            ],
+            "confidence": 0.971,
+            "span": {
+              "offset": 857,
+              "length": 7
+            }
+          },
+          {
+            "content": "THANK",
+            "polygon": [
+              3.1278,
+              8.5174,
+              3.5671,
+              8.5126,
+              3.5719,
+              8.6701,
+              3.1326,
+              8.6654
+            ],
+            "confidence": 0.995,
+            "span": {
+              "offset": 865,
+              "length": 5
+            }
+          },
+          {
+            "content": "YOU",
+            "polygon": [
+              3.6197,
+              8.5126,
+              3.8966,
+              8.5126,
+              3.8966,
+              8.6749,
+              3.6244,
+              8.6701
+            ],
+            "confidence": 0.997,
+            "span": {
+              "offset": 871,
+              "length": 3
+            }
+          },
+          {
+            "content": "FOR",
+            "polygon": [
+              3.9348,
+              8.5126,
+              4.2118,
+              8.5078,
+              4.2118,
+              8.6749,
+              3.9396,
+              8.6749
+            ],
+            "confidence": 0.994,
+            "span": {
+              "offset": 875,
+              "length": 3
+            }
+          },
+          {
+            "content": "YOUR",
+            "polygon": [
+              4.25,
+              8.5078,
+              4.6177,
+              8.5078,
+              4.6225,
+              8.6749,
+              4.2548,
+              8.6749
+            ],
+            "confidence": 0.993,
+            "span": {
+              "offset": 879,
+              "length": 4
+            }
+          },
+          {
+            "content": "BUSINESS!",
+            "polygon": [
+              4.6607,
+              8.5078,
+              5.3674,
+              8.5126,
+              5.3722,
+              8.6701,
+              4.6654,
+              8.6749
+            ],
+            "confidence": 0.97,
+            "span": {
+              "offset": 884,
+              "length": 9
+            }
+          },
+          {
+            "content": "REMIT",
+            "polygon": [
+              0.5683,
+              9.1428,
+              1.0028,
+              9.1428,
+              1.0028,
+              9.2765,
+              0.573,
+              9.2765
+            ],
+            "confidence": 0.993,
+            "span": {
+              "offset": 894,
+              "length": 5
+            }
+          },
+          {
+            "content": "TO:",
+            "polygon": [
+              1.0458,
+              9.138,
+              1.2702,
+              9.138,
+              1.2702,
+              9.2765,
+              1.0506,
+              9.2765
+            ],
+            "confidence": 0.995,
+            "span": {
+              "offset": 900,
+              "length": 3
+            }
+          },
+          {
+            "content": "Contoso",
+            "polygon": [
+              0.573,
+              9.3529,
+              1.127,
+              9.3529,
+              1.127,
+              9.5152,
+              0.573,
+              9.4961
+            ],
+            "confidence": 0.995,
+            "span": {
+              "offset": 904,
+              "length": 7
+            }
+          },
+          {
+            "content": "Billing",
+            "polygon": [
+              1.1652,
+              9.3529,
+              1.5902,
+              9.3529,
+              1.5902,
+              9.52,
+              1.1652,
+              9.5152
+            ],
+            "confidence": 0.994,
+            "span": {
+              "offset": 912,
+              "length": 7
+            }
+          },
+          {
+            "content": "123",
+            "polygon": [
+              0.5874,
+              9.5486,
+              0.8213,
+              9.5534,
+              0.8213,
+              9.6966,
+              0.5921,
+              9.7014
+            ],
+            "confidence": 0.996,
+            "span": {
+              "offset": 920,
+              "length": 3
+            }
+          },
+          {
+            "content": "Remit",
+            "polygon": [
+              0.8596,
+              9.5534,
+              1.2798,
+              9.5486,
+              1.2798,
+              9.7014,
+              0.8643,
+              9.6966
+            ],
+            "confidence": 0.995,
+            "span": {
+              "offset": 924,
+              "length": 5
+            }
+          },
+          {
+            "content": "St",
+            "polygon": [
+              1.3084,
+              9.5486,
+              1.4469,
+              9.5486,
+              1.4469,
+              9.7014,
+              1.3084,
+              9.7014
+            ],
+            "confidence": 0.997,
+            "span": {
+              "offset": 930,
+              "length": 2
+            }
+          },
+          {
+            "content": "New",
+            "polygon": [
+              0.5683,
+              9.7587,
+              0.8404,
+              9.7587,
+              0.8452,
+              9.921,
+              0.5683,
+              9.921
+            ],
+            "confidence": 0.997,
+            "span": {
+              "offset": 933,
+              "length": 3
+            }
+          },
+          {
+            "content": "York,",
+            "polygon": [
+              0.9169,
+              9.7587,
+              1.2607,
+              9.7539,
+              1.2654,
+              9.921,
+              0.9216,
+              9.921
+            ],
+            "confidence": 0.995,
+            "span": {
+              "offset": 937,
+              "length": 5
+            }
+          },
+          {
+            "content": "NY,",
+            "polygon": [
+              1.2941,
+              9.7539,
+              1.5472,
+              9.7491,
+              1.552,
+              9.921,
+              1.2989,
+              9.921
+            ],
+            "confidence": 0.993,
+            "span": {
+              "offset": 943,
+              "length": 3
+            }
+          },
+          {
+            "content": "10001",
+            "polygon": [
+              1.5806,
+              9.7491,
+              1.9913,
+              9.7491,
+              1.9961,
+              9.9258,
+              1.5854,
+              9.921
+            ],
+            "confidence": 0.995,
+            "span": {
+              "offset": 947,
+              "length": 5
+            }
+          }
+        ],
+        "lines": [
+          {
+            "content": "CONTOSO LTD.",
+            "polygon": [
+              0.5778,
+              0.6493,
+              2.3303,
+              0.6493,
+              2.3303,
+              0.8976,
+              0.5778,
+              0.8928
+            ],
+            "spans": [
+              {
+                "offset": 0,
+                "length": 12
+              }
+            ]
+          },
+          {
+            "content": "INVOICE",
+            "polygon": [
+              7.0531,
+              0.5729,
+              8.0129,
+              0.5634,
+              8.0129,
+              0.7782,
+              7.0531,
+              0.7878
+            ],
+            "spans": [
+              {
+                "offset": 13,
+                "length": 7
+              }
+            ]
+          },
+          {
+            "content": "Contoso Headquarters",
+            "polygon": [
+              0.5635,
+              1.3989,
+              2.1154,
+              1.3989,
+              2.1154,
+              1.5707,
+              0.5635,
+              1.5707
+            ],
+            "spans": [
+              {
+                "offset": 21,
+                "length": 20
+              }
+            ]
+          },
+          {
+            "content": "INVOICE: INV-100",
+            "polygon": [
+              6.843,
+              1.3893,
+              8.0129,
+              1.3893,
+              8.0129,
+              1.5421,
+              6.843,
+              1.5373
+            ],
+            "spans": [
+              {
+                "offset": 42,
+                "length": 16
+              }
+            ]
+          },
+          {
+            "content": "123 456th St",
+            "polygon": [
+              0.5778,
+              1.6042,
+              1.3992,
+              1.6042,
+              1.3992,
+              1.7665,
+              0.5778,
+              1.7665
+            ],
+            "spans": [
+              {
+                "offset": 59,
+                "length": 12
+              }
+            ]
+          },
+          {
+            "content": "INVOICE DATE: 11/15/2019",
+            "polygon": [
+              6.2079,
+              1.5946,
+              8.0034,
+              1.5946,
+              8.0034,
+              1.7522,
+              6.2079,
+              1.7474
+            ],
+            "spans": [
+              {
+                "offset": 72,
+                "length": 24
+              }
+            ]
+          },
+          {
+            "content": "New York, NY, 10001",
+            "polygon": [
+              0.5635,
+              1.8047,
+              1.9913,
+              1.8047,
+              1.9913,
+              1.9766,
+              0.5635,
+              1.9766
+            ],
+            "spans": [
+              {
+                "offset": 97,
+                "length": 19
+              }
+            ]
+          },
+          {
+            "content": "DUE DATE: 12/15/2019",
+            "polygon": [
+              6.4705,
+              1.7999,
+              7.9986,
+              1.7999,
+              7.9986,
+              1.9479,
+              6.4705,
+              1.9527
+            ],
+            "spans": [
+              {
+                "offset": 117,
+                "length": 20
+              }
+            ]
+          },
+          {
+            "content": "CUSTOMER NAME: MICROSOFT CORPORATION",
+            "polygon": [
+              4.9329,
+              2.0052,
+              7.9986,
+              2.0052,
+              7.9986,
+              2.1628,
+              4.9329,
+              2.1675
+            ],
+            "spans": [
+              {
+                "offset": 138,
+                "length": 36
+              }
+            ]
+          },
+          {
+            "content": "SERVICE PERIOD: 10/14/2019 - 11/14/2019",
+            "polygon": [
+              5.1478,
+              2.2105,
+              8.0034,
+              2.2105,
+              8.0034,
+              2.3681,
+              5.1478,
+              2.3633
+            ],
+            "spans": [
+              {
+                "offset": 175,
+                "length": 39
+              }
+            ]
+          },
+          {
+            "content": "CUSTOMER ID: CID-12345",
+            "polygon": [
+              6.3081,
+              2.4206,
+              8.0081,
+              2.4206,
+              8.0081,
+              2.5686,
+              6.3081,
+              2.5734
+            ],
+            "spans": [
+              {
+                "offset": 215,
+                "length": 22
+              }
+            ]
+          },
+          {
+            "content": "Microsoft Corp",
+            "polygon": [
+              0.573,
+              2.6306,
+              1.6045,
+              2.6306,
+              1.5997,
+              2.7977,
+              0.573,
+              2.7882
+            ],
+            "spans": [
+              {
+                "offset": 238,
+                "length": 14
+              }
+            ]
+          },
+          {
+            "content": "123 Other St,",
+            "polygon": [
+              0.5778,
+              2.8264,
+              1.4803,
+              2.8264,
+              1.4756,
+              2.9935,
+              0.5778,
+              2.9887
+            ],
+            "spans": [
+              {
+                "offset": 253,
+                "length": 13
+              }
+            ]
+          },
+          {
+            "content": "Redmond WA, 98052",
+            "polygon": [
+              0.5683,
+              3.0317,
+              2.0152,
+              3.0221,
+              2.0152,
+              3.194,
+              0.5683,
+              3.2036
+            ],
+            "spans": [
+              {
+                "offset": 267,
+                "length": 17
+              }
+            ]
+          },
+          {
+            "content": "BILL TO:",
+            "polygon": [
+              0.5683,
+              3.533,
+              1.1126,
+              3.533,
+              1.1126,
+              3.6762,
+              0.5683,
+              3.6762
+            ],
+            "spans": [
+              {
+                "offset": 285,
+                "length": 8
+              }
+            ]
+          },
+          {
+            "content": "SHIP TO:",
+            "polygon": [
+              3.314,
+              3.533,
+              3.911,
+              3.533,
+              3.911,
+              3.681,
+              3.314,
+              3.6762
+            ],
+            "spans": [
+              {
+                "offset": 294,
+                "length": 8
+              }
+            ]
+          },
+          {
+            "content": "SERVICE ADDRESS:",
+            "polygon": [
+              6.1792,
+              3.5282,
+              7.4399,
+              3.5234,
+              7.4399,
+              3.6858,
+              6.1792,
+              3.6858
+            ],
+            "spans": [
+              {
+                "offset": 303,
+                "length": 16
+              }
+            ]
+          },
+          {
+            "content": "Microsoft Finance",
+            "polygon": [
+              0.5683,
+              3.7478,
+              1.8051,
+              3.7478,
+              1.8051,
+              3.9006,
+              0.5683,
+              3.9006
+            ],
+            "spans": [
+              {
+                "offset": 320,
+                "length": 17
+              }
+            ]
+          },
+          {
+            "content": "Microsoft Delivery",
+            "polygon": [
+              3.3093,
+              3.7383,
+              4.589,
+              3.7478,
+              4.589,
+              3.9197,
+              3.3093,
+              3.9054
+            ],
+            "spans": [
+              {
+                "offset": 338,
+                "length": 18
+              }
+            ]
+          },
+          {
+            "content": "Microsoft Services",
+            "polygon": [
+              6.1935,
+              3.7431,
+              7.4494,
+              3.7478,
+              7.4494,
+              3.9006,
+              6.1935,
+              3.9006
+            ],
+            "spans": [
+              {
+                "offset": 357,
+                "length": 18
+              }
+            ]
+          },
+          {
+            "content": "123 Bill St,",
+            "polygon": [
+              0.5826,
+              3.9531,
+              1.2893,
+              3.9531,
+              1.2893,
+              4.1107,
+              0.5826,
+              4.1107
+            ],
+            "spans": [
+              {
+                "offset": 376,
+                "length": 12
+              }
+            ]
+          },
+          {
+            "content": "123 Ship St,",
+            "polygon": [
+              3.3284,
+              3.9531,
+              4.1163,
+              3.9531,
+              4.1163,
+              4.1202,
+              3.3284,
+              4.1155
+            ],
+            "spans": [
+              {
+                "offset": 389,
+                "length": 12
+              }
+            ]
+          },
+          {
+            "content": "123 Service St,",
+            "polygon": [
+              6.2079,
+              3.9484,
+              7.1963,
+              3.9531,
+              7.1916,
+              4.1107,
+              6.2079,
+              4.1107
+            ],
+            "spans": [
+              {
+                "offset": 402,
+                "length": 15
+              }
+            ]
+          },
+          {
+            "content": "Redmond WA, 98052",
+            "polygon": [
+              0.5635,
+              4.1441,
+              2.0152,
+              4.1441,
+              2.0152,
+              4.3112,
+              0.5635,
+              4.3112
+            ],
+            "spans": [
+              {
+                "offset": 418,
+                "length": 17
+              }
+            ]
+          },
+          {
+            "content": "Redmond WA, 98052",
+            "polygon": [
+              3.314,
+              4.1393,
+              4.7657,
+              4.1393,
+              4.7657,
+              4.3112,
+              3.314,
+              4.3064
+            ],
+            "spans": [
+              {
+                "offset": 436,
+                "length": 17
+              }
+            ]
+          },
+          {
+            "content": "Redmond WA, 98052",
+            "polygon": [
+              6.1935,
+              4.1441,
+              7.6452,
+              4.1441,
+              7.6452,
+              4.3112,
+              6.1935,
+              4.3112
+            ],
+            "spans": [
+              {
+                "offset": 454,
+                "length": 17
+              }
+            ]
+          },
+          {
+            "content": "SALESPERSON",
+            "polygon": [
+              0.6781,
+              4.6263,
+              1.6236,
+              4.6263,
+              1.6236,
+              4.7695,
+              0.6781,
+              4.7743
+            ],
+            "spans": [
+              {
+                "offset": 472,
+                "length": 11
+              }
+            ]
+          },
+          {
+            "content": "P.O. NUMBER",
+            "polygon": [
+              2.0963,
+              4.6263,
+              3.0275,
+              4.6263,
+              3.0275,
+              4.7695,
+              2.0963,
+              4.7648
+            ],
+            "spans": [
+              {
+                "offset": 484,
+                "length": 11
+              }
+            ]
+          },
+          {
+            "content": "REQUISITIONER",
+            "polygon": [
+              3.4716,
+              4.6215,
+              4.5317,
+              4.6215,
+              4.5317,
+              4.7743,
+              3.4716,
+              4.7743
+            ],
+            "spans": [
+              {
+                "offset": 496,
+                "length": 13
+              }
+            ]
+          },
+          {
+            "content": "SHIPPED VIA",
+            "polygon": [
+              4.7801,
+              4.6311,
+              5.6348,
+              4.6311,
+              5.6348,
+              4.7648,
+              4.7848,
+              4.7648
+            ],
+            "spans": [
+              {
+                "offset": 510,
+                "length": 11
+              }
+            ]
+          },
+          {
+            "content": "F.O.B. POINT",
+            "polygon": [
+              5.8449,
+              4.6263,
+              6.7093,
+              4.6263,
+              6.7093,
+              4.7695,
+              5.8449,
+              4.7695
+            ],
+            "spans": [
+              {
+                "offset": 522,
+                "length": 12
+              }
+            ]
+          },
+          {
+            "content": "TERMS",
+            "polygon": [
+              7.1581,
+              4.6263,
+              7.6309,
+              4.6263,
+              7.6309,
+              4.7648,
+              7.1581,
+              4.7648
+            ],
+            "spans": [
+              {
+                "offset": 535,
+                "length": 5
+              }
+            ]
+          },
+          {
+            "content": "PO-3333",
+            "polygon": [
+              1.8815,
+              4.9032,
+              2.4831,
+              4.9032,
+              2.4831,
+              5.056,
+              1.8815,
+              5.056
+            ],
+            "spans": [
+              {
+                "offset": 541,
+                "length": 7
+              }
+            ]
+          },
+          {
+            "content": "DATE",
+            "polygon": [
+              0.7258,
+              5.4045,
+              1.084,
+              5.3997,
+              1.084,
+              5.5286,
+              0.7258,
+              5.5334
+            ],
+            "spans": [
+              {
+                "offset": 549,
+                "length": 4
+              }
+            ]
+          },
+          {
+            "content": "ITEM CODE",
+            "polygon": [
+              1.3896,
+              5.395,
+              2.1537,
+              5.395,
+              2.1537,
+              5.5334,
+              1.3896,
+              5.5334
+            ],
+            "spans": [
+              {
+                "offset": 554,
+                "length": 9
+              }
+            ]
+          },
+          {
+            "content": "DESCRIPTION",
+            "polygon": [
+              2.827,
+              5.3997,
+              3.7247,
+              5.3997,
+              3.7247,
+              5.5334,
+              2.827,
+              5.5334
+            ],
+            "spans": [
+              {
+                "offset": 564,
+                "length": 11
+              }
+            ]
+          },
+          {
+            "content": "QTY",
+            "polygon": [
+              4.3789,
+              5.4045,
+              4.6654,
+              5.4045,
+              4.6654,
+              5.5382,
+              4.3789,
+              5.5382
+            ],
+            "spans": [
+              {
+                "offset": 576,
+                "length": 3
+              }
+            ]
+          },
+          {
+            "content": "UM",
+            "polygon": [
+              5.0284,
+              5.3997,
+              5.2719,
+              5.4045,
+              5.2719,
+              5.5334,
+              5.0284,
+              5.5334
+            ],
+            "spans": [
+              {
+                "offset": 580,
+                "length": 2
+              }
+            ]
+          },
+          {
+            "content": "PRICE",
+            "polygon": [
+              5.8306,
+              5.3997,
+              6.227,
+              5.3997,
+              6.227,
+              5.5286,
+              5.8306,
+              5.5286
+            ],
+            "spans": [
+              {
+                "offset": 583,
+                "length": 5
+              }
+            ]
+          },
+          {
+            "content": "TAX",
+            "polygon": [
+              6.6997,
+              5.4045,
+              6.9815,
+              5.3997,
+              6.9815,
+              5.5286,
+              6.7045,
+              5.5286
+            ],
+            "spans": [
+              {
+                "offset": 589,
+                "length": 3
+              }
+            ]
+          },
+          {
+            "content": "AMOUNT",
+            "polygon": [
+              7.2632,
+              5.395,
+              7.9174,
+              5.395,
+              7.9174,
+              5.5382,
+              7.2632,
+              5.5382
+            ],
+            "spans": [
+              {
+                "offset": 593,
+                "length": 6
+              }
+            ]
+          },
+          {
+            "content": "3/4/2021",
+            "polygon": [
+              0.573,
+              5.6623,
+              1.2225,
+              5.6623,
+              1.2225,
+              5.8342,
+              0.573,
+              5.8342
+            ],
+            "spans": [
+              {
+                "offset": 600,
+                "length": 8
+              }
+            ]
+          },
+          {
+            "content": "A123",
+            "polygon": [
+              1.5854,
+              5.6719,
+              1.9531,
+              5.6719,
+              1.9531,
+              5.8151,
+              1.5902,
+              5.8103
+            ],
+            "spans": [
+              {
+                "offset": 609,
+                "length": 4
+              }
+            ]
+          },
+          {
+            "content": "Consulting Services",
+            "polygon": [
+              2.316,
+              5.6719,
+              3.634,
+              5.6719,
+              3.634,
+              5.8294,
+              2.316,
+              5.8342
+            ],
+            "spans": [
+              {
+                "offset": 614,
+                "length": 19
+              }
+            ]
+          },
+          {
+            "content": "2",
+            "polygon": [
+              4.5843,
+              5.6767,
+              4.6654,
+              5.6767,
+              4.6654,
+              5.8056,
+              4.5843,
+              5.8008
+            ],
+            "spans": [
+              {
+                "offset": 634,
+                "length": 1
+              }
+            ]
+          },
+          {
+            "content": "hours",
+            "polygon": [
+              4.8183,
+              5.6767,
+              5.2146,
+              5.6767,
+              5.2194,
+              5.8151,
+              4.823,
+              5.8151
+            ],
+            "spans": [
+              {
+                "offset": 636,
+                "length": 5
+              }
+            ]
+          },
+          {
+            "content": "$30.00",
+            "polygon": [
+              5.9404,
+              5.6623,
+              6.418,
+              5.6623,
+              6.4228,
+              5.8247,
+              5.9357,
+              5.8294
+            ],
+            "spans": [
+              {
+                "offset": 642,
+                "length": 6
+              }
+            ]
+          },
+          {
+            "content": "$6.00",
+            "polygon": [
+              6.6902,
+              5.6671,
+              7.0865,
+              5.6671,
+              7.0913,
+              5.8199,
+              6.6949,
+              5.8294
+            ],
+            "spans": [
+              {
+                "offset": 649,
+                "length": 5
+              }
+            ]
+          },
+          {
+            "content": "$60.00",
+            "polygon": [
+              7.4447,
+              5.6671,
+              7.9222,
+              5.6671,
+              7.9222,
+              5.8294,
+              7.4447,
+              5.8294
+            ],
+            "spans": [
+              {
+                "offset": 655,
+                "length": 6
+              }
+            ]
+          },
+          {
+            "content": "3/5/2021",
+            "polygon": [
+              0.573,
+              5.9583,
+              1.2272,
+              5.9583,
+              1.2272,
+              6.1207,
+              0.573,
+              6.1254
+            ],
+            "spans": [
+              {
+                "offset": 662,
+                "length": 8
+              }
+            ]
+          },
+          {
+            "content": "B456",
+            "polygon": [
+              1.5902,
+              5.9727,
+              1.9531,
+              5.9727,
+              1.9531,
+              6.1063,
+              1.5949,
+              6.1111
+            ],
+            "spans": [
+              {
+                "offset": 671,
+                "length": 4
+              }
+            ]
+          },
+          {
+            "content": "Document Fee",
+            "polygon": [
+              2.3208,
+              5.9679,
+              3.3188,
+              5.9679,
+              3.3188,
+              6.1159,
+              2.3208,
+              6.1207
+            ],
+            "spans": [
+              {
+                "offset": 676,
+                "length": 12
+              }
+            ]
+          },
+          {
+            "content": "3",
+            "polygon": [
+              4.5843,
+              5.9774,
+              4.6654,
+              5.9774,
+              4.675,
+              6.1016,
+              4.589,
+              6.1016
+            ],
+            "spans": [
+              {
+                "offset": 689,
+                "length": 1
+              }
+            ]
+          },
+          {
+            "content": "$10.00",
+            "polygon": [
+              5.9404,
+              5.9631,
+              6.4275,
+              5.9631,
+              6.4275,
+              6.1159,
+              5.9404,
+              6.1207
+            ],
+            "spans": [
+              {
+                "offset": 691,
+                "length": 6
+              }
+            ]
+          },
+          {
+            "content": "$3.00",
+            "polygon": [
+              6.6949,
+              5.9583,
+              7.0913,
+              5.9583,
+              7.0961,
+              6.1207,
+              6.6949,
+              6.1207
+            ],
+            "spans": [
+              {
+                "offset": 698,
+                "length": 5
+              }
+            ]
+          },
+          {
+            "content": "$30.00",
+            "polygon": [
+              7.4447,
+              5.9631,
+              7.9222,
+              5.9583,
+              7.9222,
+              6.1159,
+              7.4494,
+              6.1207
+            ],
+            "spans": [
+              {
+                "offset": 704,
+                "length": 6
+              }
+            ]
+          },
+          {
+            "content": "3/6/2021",
+            "polygon": [
+              0.573,
+              6.2639,
+              1.2177,
+              6.2591,
+              1.2177,
+              6.4214,
+              0.573,
+              6.4214
+            ],
+            "spans": [
+              {
+                "offset": 711,
+                "length": 8
+              }
+            ]
+          },
+          {
+            "content": "C789",
+            "polygon": [
+              1.5854,
+              6.2687,
+              1.9483,
+              6.2687,
+              1.9483,
+              6.4167,
+              1.5902,
+              6.4119
+            ],
+            "spans": [
+              {
+                "offset": 720,
+                "length": 4
+              }
+            ]
+          },
+          {
+            "content": "Printing Fee",
+            "polygon": [
+              2.316,
+              6.2687,
+              3.1517,
+              6.2687,
+              3.1517,
+              6.4358,
+              2.316,
+              6.4358
+            ],
+            "spans": [
+              {
+                "offset": 725,
+                "length": 12
+              }
+            ]
+          },
+          {
+            "content": "10",
+            "polygon": [
+              4.4983,
+              6.2734,
+              4.6702,
+              6.2734,
+              4.675,
+              6.4071,
+              4.5079,
+              6.4119
+            ],
+            "spans": [
+              {
+                "offset": 738,
+                "length": 2
+              }
+            ]
+          },
+          {
+            "content": "pages",
+            "polygon": [
+              4.8087,
+              6.283,
+              5.2337,
+              6.283,
+              5.2337,
+              6.4453,
+              4.8087,
+              6.4453
+            ],
+            "spans": [
+              {
+                "offset": 741,
+                "length": 5
+              }
+            ]
+          },
+          {
+            "content": "$1.00",
+            "polygon": [
+              6.0312,
+              6.2591,
+              6.4228,
+              6.2543,
+              6.4275,
+              6.4167,
+              6.0264,
+              6.4214
+            ],
+            "spans": [
+              {
+                "offset": 747,
+                "length": 5
+              }
+            ]
+          },
+          {
+            "content": "$1.00",
+            "polygon": [
+              6.6902,
+              6.2687,
+              7.0865,
+              6.2639,
+              7.0865,
+              6.4167,
+              6.6949,
+              6.4167
+            ],
+            "spans": [
+              {
+                "offset": 753,
+                "length": 5
+              }
+            ]
+          },
+          {
+            "content": "$10.00",
+            "polygon": [
+              7.4351,
+              6.2639,
+              7.927,
+              6.2591,
+              7.927,
+              6.4167,
+              7.4351,
+              6.4214
+            ],
+            "spans": [
+              {
+                "offset": 759,
+                "length": 6
+              }
+            ]
+          },
+          {
+            "content": "SUBTOTAL",
+            "polygon": [
+              6.0073,
+              6.8845,
+              6.7427,
+              6.8845,
+              6.7427,
+              7.0421,
+              6.0073,
+              7.0373
+            ],
+            "spans": [
+              {
+                "offset": 766,
+                "length": 8
+              }
+            ]
+          },
+          {
+            "content": "$100.00",
+            "polygon": [
+              7.3587,
+              6.8511,
+              7.9317,
+              6.8511,
+              7.9317,
+              7.0135,
+              7.3587,
+              7.0135
+            ],
+            "spans": [
+              {
+                "offset": 775,
+                "length": 7
+              }
+            ]
+          },
+          {
+            "content": "SALES TAX",
+            "polygon": [
+              6.0169,
+              7.1662,
+              6.7427,
+              7.1662,
+              6.7427,
+              7.3381,
+              6.0169,
+              7.3333
+            ],
+            "spans": [
+              {
+                "offset": 783,
+                "length": 9
+              }
+            ]
+          },
+          {
+            "content": "$10.00",
+            "polygon": [
+              7.4494,
+              7.1567,
+              7.927,
+              7.1519,
+              7.9317,
+              7.3142,
+              7.4494,
+              7.319
+            ],
+            "spans": [
+              {
+                "offset": 793,
+                "length": 6
+              }
+            ]
+          },
+          {
+            "content": "TOTAL",
+            "polygon": [
+              6.2795,
+              7.4861,
+              6.7331,
+              7.4861,
+              6.7331,
+              7.6389,
+              6.2795,
+              7.6293
+            ],
+            "spans": [
+              {
+                "offset": 800,
+                "length": 5
+              }
+            ]
+          },
+          {
+            "content": "$110.00",
+            "polygon": [
+              7.3683,
+              7.4575,
+              7.9317,
+              7.4479,
+              7.9317,
+              7.615,
+              7.3683,
+              7.6246
+            ],
+            "spans": [
+              {
+                "offset": 806,
+                "length": 7
+              }
+            ]
+          },
+          {
+            "content": "PREVIOUS UNPAID BALANCE",
+            "polygon": [
+              4.7801,
+              7.7726,
+              6.7331,
+              7.7726,
+              6.7331,
+              7.9349,
+              4.7801,
+              7.9349
+            ],
+            "spans": [
+              {
+                "offset": 814,
+                "length": 23
+              }
+            ]
+          },
+          {
+            "content": "$500.00",
+            "polygon": [
+              7.3587,
+              7.7487,
+              7.9413,
+              7.7487,
+              7.9413,
+              7.911,
+              7.3587,
+              7.911
+            ],
+            "spans": [
+              {
+                "offset": 838,
+                "length": 7
+              }
+            ]
+          },
+          {
+            "content": "AMOUNT DUE",
+            "polygon": [
+              5.7494,
+              8.0686,
+              6.7379,
+              8.0686,
+              6.7379,
+              8.2309,
+              5.7494,
+              8.2261
+            ],
+            "spans": [
+              {
+                "offset": 846,
+                "length": 10
+              }
+            ]
+          },
+          {
+            "content": "$610.00",
+            "polygon": [
+              7.3587,
+              8.0399,
+              7.9413,
+              8.0399,
+              7.9413,
+              8.2118,
+              7.3587,
+              8.2118
+            ],
+            "spans": [
+              {
+                "offset": 857,
+                "length": 7
+              }
+            ]
+          },
+          {
+            "content": "THANK YOU FOR YOUR BUSINESS!",
+            "polygon": [
+              3.1087,
+              8.5078,
+              5.377,
+              8.5078,
+              5.377,
+              8.6701,
+              3.1087,
+              8.6701
+            ],
+            "spans": [
+              {
+                "offset": 865,
+                "length": 28
+              }
+            ]
+          },
+          {
+            "content": "REMIT TO:",
+            "polygon": [
+              0.5683,
+              9.138,
+              1.275,
+              9.1332,
+              1.275,
+              9.2717,
+              0.5683,
+              9.2765
+            ],
+            "spans": [
+              {
+                "offset": 894,
+                "length": 9
+              }
+            ]
+          },
+          {
+            "content": "Contoso Billing",
+            "polygon": [
+              0.5683,
+              9.3481,
+              1.5902,
+              9.3481,
+              1.5902,
+              9.5152,
+              0.5683,
+              9.5056
+            ],
+            "spans": [
+              {
+                "offset": 904,
+                "length": 15
+              }
+            ]
+          },
+          {
+            "content": "123 Remit St",
+            "polygon": [
+              0.5778,
+              9.5486,
+              1.4469,
+              9.5486,
+              1.4469,
+              9.6966,
+              0.5778,
+              9.6966
+            ],
+            "spans": [
+              {
+                "offset": 920,
+                "length": 12
+              }
+            ]
+          },
+          {
+            "content": "New York, NY, 10001",
+            "polygon": [
+              0.5635,
+              9.7491,
+              1.9961,
+              9.7444,
+              1.9961,
+              9.921,
+              0.5635,
+              9.9258
+            ],
+            "spans": [
+              {
+                "offset": 933,
+                "length": 19
+              }
+            ]
+          }
+        ],
+        "spans": [
+          {
+            "offset": 0,
+            "length": 952
+          }
+        ]
+      }
+    ],
+    "tables": [
+      {
+        "rowCount": 2,
+        "columnCount": 6,
+        "cells": [
+          {
+            "kind": "columnHeader",
+            "rowIndex": 0,
+            "columnIndex": 0,
+            "content": "SALESPERSON",
+            "boundingRegions": [
+              {
+                "pageNumber": 1,
+                "polygon": [
+                  0.5133,
+                  4.5662,
+                  1.8192,
+                  4.5662,
+                  1.8115,
+                  4.836,
+                  0.5133,
+                  4.836
+                ]
+              }
+            ],
+            "spans": [
+              {
+                "offset": 472,
+                "length": 11
+              }
+            ]
+          },
+          {
+            "kind": "columnHeader",
+            "rowIndex": 0,
+            "columnIndex": 1,
+            "content": "P.O. NUMBER",
+            "boundingRegions": [
+              {
+                "pageNumber": 1,
+                "polygon": [
+                  1.8192,
+                  4.5662,
+                  3.3105,
+                  4.5662,
+                  3.3105,
+                  4.836,
+                  1.8115,
+                  4.836
+                ]
+              }
+            ],
+            "spans": [
+              {
+                "offset": 484,
+                "length": 11
+              }
+            ]
+          },
+          {
+            "kind": "columnHeader",
+            "rowIndex": 0,
+            "columnIndex": 2,
+            "content": "REQUISITIONER",
+            "boundingRegions": [
+              {
+                "pageNumber": 1,
+                "polygon": [
+                  3.3105,
+                  4.5662,
+                  4.6937,
+                  4.5662,
+                  4.6937,
+                  4.836,
+                  3.3105,
+                  4.836
+                ]
+              }
+            ],
+            "spans": [
+              {
+                "offset": 496,
+                "length": 13
+              }
+            ]
+          },
+          {
+            "kind": "columnHeader",
+            "rowIndex": 0,
+            "columnIndex": 3,
+            "content": "SHIPPED VIA",
+            "boundingRegions": [
+              {
+                "pageNumber": 1,
+                "polygon": [
+                  4.6937,
+                  4.5662,
+                  5.7446,
+                  4.5662,
+                  5.7446,
+                  4.836,
+                  4.6937,
+                  4.836
+                ]
+              }
+            ],
+            "spans": [
+              {
+                "offset": 510,
+                "length": 11
+              }
+            ]
+          },
+          {
+            "kind": "columnHeader",
+            "rowIndex": 0,
+            "columnIndex": 4,
+            "content": "F.O.B. POINT",
+            "boundingRegions": [
+              {
+                "pageNumber": 1,
+                "polygon": [
+                  5.7446,
+                  4.5662,
+                  6.811,
+                  4.5662,
+                  6.811,
+                  4.836,
+                  5.7446,
+                  4.836
+                ]
+              }
+            ],
+            "spans": [
+              {
+                "offset": 522,
+                "length": 12
+              }
+            ]
+          },
+          {
+            "kind": "columnHeader",
+            "rowIndex": 0,
+            "columnIndex": 5,
+            "content": "TERMS",
+            "boundingRegions": [
+              {
+                "pageNumber": 1,
+                "polygon": [
+                  6.811,
+                  4.5662,
+                  8.0009,
+                  4.5662,
+                  8.0009,
+                  4.836,
+                  6.811,
+                  4.836
+                ]
+              }
+            ],
+            "spans": [
+              {
+                "offset": 535,
+                "length": 5
+              }
+            ]
+          },
+          {
+            "rowIndex": 1,
+            "columnIndex": 0,
+            "content": "",
+            "boundingRegions": [
+              {
+                "pageNumber": 1,
+                "polygon": [
+                  0.5133,
+                  4.836,
+                  1.8115,
+                  4.836,
+                  1.8115,
+                  5.1057,
+                  0.5133,
+                  5.1134
+                ]
+              }
+            ],
+            "spans": []
+          },
+          {
+            "rowIndex": 1,
+            "columnIndex": 1,
+            "content": "PO-3333",
+            "boundingRegions": [
+              {
+                "pageNumber": 1,
+                "polygon": [
+                  1.8115,
+                  4.836,
+                  3.3105,
+                  4.836,
+                  3.3105,
+                  5.1057,
+                  1.8115,
+                  5.1057
+                ]
+              }
+            ],
+            "spans": [
+              {
+                "offset": 541,
+                "length": 7
+              }
+            ]
+          },
+          {
+            "rowIndex": 1,
+            "columnIndex": 2,
+            "content": "",
+            "boundingRegions": [
+              {
+                "pageNumber": 1,
+                "polygon": [
+                  3.3105,
+                  4.836,
+                  4.6937,
+                  4.836,
+                  4.686,
+                  5.1134,
+                  3.3105,
+                  5.1057
+                ]
+              }
+            ],
+            "spans": []
+          },
+          {
+            "rowIndex": 1,
+            "columnIndex": 3,
+            "content": "",
+            "boundingRegions": [
+              {
+                "pageNumber": 1,
+                "polygon": [
+                  4.6937,
+                  4.836,
+                  5.7446,
+                  4.836,
+                  5.7446,
+                  5.1134,
+                  4.686,
+                  5.1134
+                ]
+              }
+            ],
+            "spans": []
+          },
+          {
+            "rowIndex": 1,
+            "columnIndex": 4,
+            "content": "",
+            "boundingRegions": [
+              {
+                "pageNumber": 1,
+                "polygon": [
+                  5.7446,
+                  4.836,
+                  6.811,
+                  4.836,
+                  6.811,
+                  5.1134,
+                  5.7446,
+                  5.1134
+                ]
+              }
+            ],
+            "spans": []
+          },
+          {
+            "rowIndex": 1,
+            "columnIndex": 5,
+            "content": "",
+            "boundingRegions": [
+              {
+                "pageNumber": 1,
+                "polygon": [
+                  6.811,
+                  4.836,
+                  8.0009,
+                  4.836,
+                  8.0009,
+                  5.1134,
+                  6.811,
+                  5.1134
+                ]
+              }
+            ],
+            "spans": []
+          }
+        ],
+        "boundingRegions": [
+          {
+            "pageNumber": 1,
+            "polygon": [
+              0.4694,
+              4.547,
+              8.0058,
+              4.5467,
+              8.0055,
+              5.1205,
+              0.4686,
+              5.1214
+            ]
+          }
+        ],
+        "spans": [
+          {
+            "offset": 472,
+            "length": 76
+          }
+        ]
+      },
+      {
+        "rowCount": 4,
+        "columnCount": 8,
+        "cells": [
+          {
+            "kind": "columnHeader",
+            "rowIndex": 0,
+            "columnIndex": 0,
+            "content": "DATE",
+            "boundingRegions": [
+              {
+                "pageNumber": 1,
+                "polygon": [
+                  0.4992,
+                  5.321,
+                  1.3091,
+                  5.3287,
+                  1.3091,
+                  5.6057,
+                  0.4992,
+                  5.6057
+                ]
+              }
+            ],
+            "spans": [
+              {
+                "offset": 549,
+                "length": 4
+              }
+            ]
+          },
+          {
+            "kind": "columnHeader",
+            "rowIndex": 0,
+            "columnIndex": 1,
+            "content": "ITEM CODE",
+            "boundingRegions": [
+              {
+                "pageNumber": 1,
+                "polygon": [
+                  1.3091,
+                  5.3287,
+                  2.2424,
+                  5.3287,
+                  2.2424,
+                  5.6057,
+                  1.3091,
+                  5.6057
+                ]
+              }
+            ],
+            "spans": [
+              {
+                "offset": 554,
+                "length": 9
+              }
+            ]
+          },
+          {
+            "kind": "columnHeader",
+            "rowIndex": 0,
+            "columnIndex": 2,
+            "content": "DESCRIPTION",
+            "boundingRegions": [
+              {
+                "pageNumber": 1,
+                "polygon": [
+                  2.2424,
+                  5.3287,
+                  4.3172,
+                  5.3287,
+                  4.3172,
+                  5.6057,
+                  2.2424,
+                  5.6057
+                ]
+              }
+            ],
+            "spans": [
+              {
+                "offset": 564,
+                "length": 11
+              }
+            ]
+          },
+          {
+            "kind": "columnHeader",
+            "rowIndex": 0,
+            "columnIndex": 3,
+            "content": "QTY",
+            "boundingRegions": [
+              {
+                "pageNumber": 1,
+                "polygon": [
+                  4.3172,
+                  5.3287,
+                  4.7491,
+                  5.3287,
+                  4.7491,
+                  5.6057,
+                  4.3172,
+                  5.6057
+                ]
+              }
+            ],
+            "spans": [
+              {
+                "offset": 576,
+                "length": 3
+              }
+            ]
+          },
+          {
+            "kind": "columnHeader",
+            "rowIndex": 0,
+            "columnIndex": 4,
+            "content": "UM",
+            "boundingRegions": [
+              {
+                "pageNumber": 1,
+                "polygon": [
+                  4.7491,
+                  5.3287,
+                  5.559,
+                  5.3287,
+                  5.559,
+                  5.6057,
+                  4.7491,
+                  5.6057
+                ]
+              }
+            ],
+            "spans": [
+              {
+                "offset": 580,
+                "length": 2
+              }
+            ]
+          },
+          {
+            "kind": "columnHeader",
+            "rowIndex": 0,
+            "columnIndex": 5,
+            "content": "PRICE",
+            "boundingRegions": [
+              {
+                "pageNumber": 1,
+                "polygon": [
+                  5.559,
+                  5.3287,
+                  6.5,
+                  5.3287,
+                  6.5,
+                  5.6057,
+                  5.559,
+                  5.6057
+                ]
+              }
+            ],
+            "spans": [
+              {
+                "offset": 583,
+                "length": 5
+              }
+            ]
+          },
+          {
+            "kind": "columnHeader",
+            "rowIndex": 0,
+            "columnIndex": 6,
+            "content": "TAX",
+            "boundingRegions": [
+              {
+                "pageNumber": 1,
+                "polygon": [
+                  6.5,
+                  5.3287,
+                  7.1865,
+                  5.3287,
+                  7.1865,
+                  5.6057,
+                  6.5,
+                  5.6057
+                ]
+              }
+            ],
+            "spans": [
+              {
+                "offset": 589,
+                "length": 3
+              }
+            ]
+          },
+          {
+            "kind": "columnHeader",
+            "rowIndex": 0,
+            "columnIndex": 7,
+            "content": "AMOUNT",
+            "boundingRegions": [
+              {
+                "pageNumber": 1,
+                "polygon": [
+                  7.1865,
+                  5.3287,
+                  7.9964,
+                  5.3287,
+                  7.9964,
+                  5.6057,
+                  7.1865,
+                  5.6057
+                ]
+              }
+            ],
+            "spans": [
+              {
+                "offset": 593,
+                "length": 6
+              }
+            ]
+          },
+          {
+            "rowIndex": 1,
+            "columnIndex": 0,
+            "content": "3/4/2021",
+            "boundingRegions": [
+              {
+                "pageNumber": 1,
+                "polygon": [
+                  0.4992,
+                  5.6057,
+                  1.3091,
+                  5.6057,
+                  1.3091,
+                  5.898,
+                  0.4992,
+                  5.898
+                ]
+              }
+            ],
+            "spans": [
+              {
+                "offset": 600,
+                "length": 8
+              }
+            ]
+          },
+          {
+            "rowIndex": 1,
+            "columnIndex": 1,
+            "content": "A123",
+            "boundingRegions": [
+              {
+                "pageNumber": 1,
+                "polygon": [
+                  1.3091,
+                  5.6057,
+                  2.2424,
+                  5.6057,
+                  2.2424,
+                  5.898,
+                  1.3091,
+                  5.898
+                ]
+              }
+            ],
+            "spans": [
+              {
+                "offset": 609,
+                "length": 4
+              }
+            ]
+          },
+          {
+            "rowIndex": 1,
+            "columnIndex": 2,
+            "content": "Consulting Services",
+            "boundingRegions": [
+              {
+                "pageNumber": 1,
+                "polygon": [
+                  2.2424,
+                  5.6057,
+                  4.3172,
+                  5.6057,
+                  4.3172,
+                  5.898,
+                  2.2424,
+                  5.898
+                ]
+              }
+            ],
+            "spans": [
+              {
+                "offset": 614,
+                "length": 19
+              }
+            ]
+          },
+          {
+            "rowIndex": 1,
+            "columnIndex": 3,
+            "content": "2",
+            "boundingRegions": [
+              {
+                "pageNumber": 1,
+                "polygon": [
+                  4.3172,
+                  5.6057,
+                  4.7491,
+                  5.6057,
+                  4.7491,
+                  5.898,
+                  4.3172,
+                  5.898
+                ]
+              }
+            ],
+            "spans": [
+              {
+                "offset": 634,
+                "length": 1
+              }
+            ]
+          },
+          {
+            "rowIndex": 1,
+            "columnIndex": 4,
+            "content": "hours",
+            "boundingRegions": [
+              {
+                "pageNumber": 1,
+                "polygon": [
+                  4.7491,
+                  5.6057,
+                  5.559,
+                  5.6057,
+                  5.559,
+                  5.898,
+                  4.7491,
+                  5.898
+                ]
+              }
+            ],
+            "spans": [
+              {
+                "offset": 636,
+                "length": 5
+              }
+            ]
+          },
+          {
+            "rowIndex": 1,
+            "columnIndex": 5,
+            "content": "$30.00",
+            "boundingRegions": [
+              {
+                "pageNumber": 1,
+                "polygon": [
+                  5.559,
+                  5.6057,
+                  6.5,
+                  5.6057,
+                  6.5,
+                  5.898,
+                  5.559,
+                  5.898
+                ]
+              }
+            ],
+            "spans": [
+              {
+                "offset": 642,
+                "length": 6
+              }
+            ]
+          },
+          {
+            "rowIndex": 1,
+            "columnIndex": 6,
+            "content": "$6.00",
+            "boundingRegions": [
+              {
+                "pageNumber": 1,
+                "polygon": [
+                  6.5,
+                  5.6057,
+                  7.1865,
+                  5.6057,
+                  7.1865,
+                  5.898,
+                  6.5,
+                  5.898
+                ]
+              }
+            ],
+            "spans": [
+              {
+                "offset": 649,
+                "length": 5
+              }
+            ]
+          },
+          {
+            "rowIndex": 1,
+            "columnIndex": 7,
+            "content": "$60.00",
+            "boundingRegions": [
+              {
+                "pageNumber": 1,
+                "polygon": [
+                  7.1865,
+                  5.6057,
+                  7.9964,
+                  5.6057,
+                  7.9964,
+                  5.9057,
+                  7.1865,
+                  5.898
+                ]
+              }
+            ],
+            "spans": [
+              {
+                "offset": 655,
+                "length": 6
+              }
+            ]
+          },
+          {
+            "rowIndex": 2,
+            "columnIndex": 0,
+            "content": "3/5/2021",
+            "boundingRegions": [
+              {
+                "pageNumber": 1,
+                "polygon": [
+                  0.4992,
+                  5.898,
+                  1.3091,
+                  5.898,
+                  1.3091,
+                  6.1903,
+                  0.4992,
+                  6.1903
+                ]
+              }
+            ],
+            "spans": [
+              {
+                "offset": 662,
+                "length": 8
+              }
+            ]
+          },
+          {
+            "rowIndex": 2,
+            "columnIndex": 1,
+            "content": "B456",
+            "boundingRegions": [
+              {
+                "pageNumber": 1,
+                "polygon": [
+                  1.3091,
+                  5.898,
+                  2.2424,
+                  5.898,
+                  2.2424,
+                  6.1903,
+                  1.3091,
+                  6.1903
+                ]
+              }
+            ],
+            "spans": [
+              {
+                "offset": 671,
+                "length": 4
+              }
+            ]
+          },
+          {
+            "rowIndex": 2,
+            "columnIndex": 2,
+            "content": "Document Fee",
+            "boundingRegions": [
+              {
+                "pageNumber": 1,
+                "polygon": [
+                  2.2424,
+                  5.898,
+                  4.3172,
+                  5.898,
+                  4.3172,
+                  6.1903,
+                  2.2424,
+                  6.1903
+                ]
+              }
+            ],
+            "spans": [
+              {
+                "offset": 676,
+                "length": 12
+              }
+            ]
+          },
+          {
+            "rowIndex": 2,
+            "columnIndex": 3,
+            "content": "3",
+            "boundingRegions": [
+              {
+                "pageNumber": 1,
+                "polygon": [
+                  4.3172,
+                  5.898,
+                  4.7491,
+                  5.898,
+                  4.7491,
+                  6.1903,
+                  4.3172,
+                  6.1903
+                ]
+              }
+            ],
+            "spans": [
+              {
+                "offset": 689,
+                "length": 1
+              }
+            ]
+          },
+          {
+            "rowIndex": 2,
+            "columnIndex": 4,
+            "content": "",
+            "boundingRegions": [
+              {
+                "pageNumber": 1,
+                "polygon": [
+                  4.7491,
+                  5.898,
+                  5.559,
+                  5.898,
+                  5.5667,
+                  6.1903,
+                  4.7491,
+                  6.1903
+                ]
+              }
+            ],
+            "spans": []
+          },
+          {
+            "rowIndex": 2,
+            "columnIndex": 5,
+            "content": "$10.00",
+            "boundingRegions": [
+              {
+                "pageNumber": 1,
+                "polygon": [
+                  5.559,
+                  5.898,
+                  6.5,
+                  5.898,
+                  6.5,
+                  6.1903,
+                  5.5667,
+                  6.1903
+                ]
+              }
+            ],
+            "spans": [
+              {
+                "offset": 691,
+                "length": 6
+              }
+            ]
+          },
+          {
+            "rowIndex": 2,
+            "columnIndex": 6,
+            "content": "$3.00",
+            "boundingRegions": [
+              {
+                "pageNumber": 1,
+                "polygon": [
+                  6.5,
+                  5.898,
+                  7.1865,
+                  5.898,
+                  7.1865,
+                  6.1903,
+                  6.5,
+                  6.1903
+                ]
+              }
+            ],
+            "spans": [
+              {
+                "offset": 698,
+                "length": 5
+              }
+            ]
+          },
+          {
+            "rowIndex": 2,
+            "columnIndex": 7,
+            "content": "$30.00",
+            "boundingRegions": [
+              {
+                "pageNumber": 1,
+                "polygon": [
+                  7.1865,
+                  5.898,
+                  7.9964,
+                  5.9057,
+                  7.9964,
+                  6.198,
+                  7.1865,
+                  6.1903
+                ]
+              }
+            ],
+            "spans": [
+              {
+                "offset": 704,
+                "length": 6
+              }
+            ]
+          },
+          {
+            "rowIndex": 3,
+            "columnIndex": 0,
+            "content": "3/6/2021",
+            "boundingRegions": [
+              {
+                "pageNumber": 1,
+                "polygon": [
+                  0.4992,
+                  6.1903,
+                  1.3091,
+                  6.1903,
+                  1.3091,
+                  6.4981,
+                  0.4992,
+                  6.4904
+                ]
+              }
+            ],
+            "spans": [
+              {
+                "offset": 711,
+                "length": 8
+              }
+            ]
+          },
+          {
+            "rowIndex": 3,
+            "columnIndex": 1,
+            "content": "C789",
+            "boundingRegions": [
+              {
+                "pageNumber": 1,
+                "polygon": [
+                  1.3091,
+                  6.1903,
+                  2.2424,
+                  6.1903,
+                  2.2424,
+                  6.4981,
+                  1.3091,
+                  6.4981
+                ]
+              }
+            ],
+            "spans": [
+              {
+                "offset": 720,
+                "length": 4
+              }
+            ]
+          },
+          {
+            "rowIndex": 3,
+            "columnIndex": 2,
+            "content": "Printing Fee",
+            "boundingRegions": [
+              {
+                "pageNumber": 1,
+                "polygon": [
+                  2.2424,
+                  6.1903,
+                  4.3172,
+                  6.1903,
+                  4.3172,
+                  6.4981,
+                  2.2424,
+                  6.4981
+                ]
+              }
+            ],
+            "spans": [
+              {
+                "offset": 725,
+                "length": 12
+              }
+            ]
+          },
+          {
+            "rowIndex": 3,
+            "columnIndex": 3,
+            "content": "10",
+            "boundingRegions": [
+              {
+                "pageNumber": 1,
+                "polygon": [
+                  4.3172,
+                  6.1903,
+                  4.7491,
+                  6.1903,
+                  4.7491,
+                  6.4981,
+                  4.3172,
+                  6.4981
+                ]
+              }
+            ],
+            "spans": [
+              {
+                "offset": 738,
+                "length": 2
+              }
+            ]
+          },
+          {
+            "rowIndex": 3,
+            "columnIndex": 4,
+            "content": "pages",
+            "boundingRegions": [
+              {
+                "pageNumber": 1,
+                "polygon": [
+                  4.7491,
+                  6.1903,
+                  5.5667,
+                  6.1903,
+                  5.5667,
+                  6.4981,
+                  4.7491,
+                  6.4981
+                ]
+              }
+            ],
+            "spans": [
+              {
+                "offset": 741,
+                "length": 5
+              }
+            ]
+          },
+          {
+            "rowIndex": 3,
+            "columnIndex": 5,
+            "content": "$1.00",
+            "boundingRegions": [
+              {
+                "pageNumber": 1,
+                "polygon": [
+                  5.5667,
+                  6.1903,
+                  6.5,
+                  6.1903,
+                  6.5,
+                  6.4981,
+                  5.5667,
+                  6.4981
+                ]
+              }
+            ],
+            "spans": [
+              {
+                "offset": 747,
+                "length": 5
+              }
+            ]
+          },
+          {
+            "rowIndex": 3,
+            "columnIndex": 6,
+            "content": "$1.00",
+            "boundingRegions": [
+              {
+                "pageNumber": 1,
+                "polygon": [
+                  6.5,
+                  6.1903,
+                  7.1865,
+                  6.1903,
+                  7.1942,
+                  6.4981,
+                  6.5,
+                  6.4981
+                ]
+              }
+            ],
+            "spans": [
+              {
+                "offset": 753,
+                "length": 5
+              }
+            ]
+          },
+          {
+            "rowIndex": 3,
+            "columnIndex": 7,
+            "content": "$10.00",
+            "boundingRegions": [
+              {
+                "pageNumber": 1,
+                "polygon": [
+                  7.1865,
+                  6.1903,
+                  7.9964,
+                  6.198,
+                  7.9964,
+                  6.4981,
+                  7.1942,
+                  6.4981
+                ]
+              }
+            ],
+            "spans": [
+              {
+                "offset": 759,
+                "length": 6
+              }
+            ]
+          }
+        ],
+        "boundingRegions": [
+          {
+            "pageNumber": 1,
+            "polygon": [
+              0.4783,
+              5.3263,
+              8.0005,
+              5.3259,
+              7.9988,
+              6.5033,
+              0.4765,
+              6.504
+            ]
+          }
+        ],
+        "spans": [
+          {
+            "offset": 549,
+            "length": 216
+          }
+        ]
+      }
+    ],
+    "styles": [],
+    "documents": [
+      {
+        "docType": "invoice",
+        "boundingRegions": [
+          {
+            "pageNumber": 1,
+            "polygon": [
+              0,
+              0,
+              8.5,
+              0,
+              8.5,
+              11,
+              0,
+              11
+            ]
+          }
+        ],
+        "fields": {
+          "AmountDue": {
+            "type": "currency",
+            "valueCurrency": {
+              "currencySymbol": "$",
+              "amount": 610.0,
+              "currencyCode": "USD"
+            },
+            "content": "$610.00",
+            "boundingRegions": [
+              {
+                "pageNumber": 1,
+                "polygon": [
+                  7.3635,
+                  8.0447,
+                  7.9222,
+                  8.0495,
+                  7.927,
+                  8.2118,
+                  7.3635,
+                  8.2166
+                ]
+              }
+            ],
+            "confidence": 0.943,
+            "spans": [
+              {
+                "offset": 857,
+                "length": 7
+              }
+            ]
+          },
+          "BillingAddress": {
+            "type": "address",
+            "content": "123 Bill St,\nRedmond WA, 98052",
+            "boundingRegions": [
+              {
+                "pageNumber": 1,
+                "polygon": [
+                  0.5683,
+                  3.9579,
+                  2.0152,
+                  3.9579,
+                  2.0152,
+                  4.316,
+                  0.5683,
+                  4.316
+                ]
+              }
+            ],
+            "confidence": 0.888,
+            "spans": [
+              {
+                "offset": 376,
+                "length": 12
+              },
+              {
+                "offset": 418,
+                "length": 17
+              }
+            ],
+            "valueAddress": {
+              "houseNumber": "123",
+              "road": "Bill St",
+              "postalCode": "98052",
+              "city": "Redmond",
+              "state": "WA",
+              "streetAddress": "123 Bill St"
+            }
+          },
+          "BillingAddressRecipient": {
+            "type": "string",
+            "valueString": "Microsoft Finance",
+            "content": "Microsoft Finance",
+            "boundingRegions": [
+              {
+                "pageNumber": 1,
+                "polygon": [
+                  0.5683,
+                  3.7422,
+                  1.7914,
+                  3.7478,
+                  1.7907,
+                  3.9061,
+                  0.5676,
+                  3.9006
+                ]
+              }
+            ],
+            "confidence": 0.937,
+            "spans": [
+              {
+                "offset": 320,
+                "length": 17
+              }
+            ]
+          },
+          "CustomerAddress": {
+            "type": "address",
+            "content": "123 Other St,\nRedmond WA, 98052",
+            "boundingRegions": [
+              {
+                "pageNumber": 1,
+                "polygon": [
+                  0.5683,
+                  2.8312,
+                  2.0152,
+                  2.8312,
+                  2.0152,
+                  3.2036,
+                  0.5683,
+                  3.2036
+                ]
+              }
+            ],
+            "confidence": 0.888,
+            "spans": [
+              {
+                "offset": 253,
+                "length": 31
+              }
+            ],
+            "valueAddress": {
+              "houseNumber": "123",
+              "road": "Other St",
+              "postalCode": "98052",
+              "city": "Redmond",
+              "state": "WA",
+              "streetAddress": "123 Other St"
+            }
+          },
+          "CustomerAddressRecipient": {
+            "type": "string",
+            "valueString": "Microsoft Corp",
+            "content": "Microsoft Corp",
+            "boundingRegions": [
+              {
+                "pageNumber": 1,
+                "polygon": [
+                  0.5732,
+                  2.6162,
+                  1.5806,
+                  2.6306,
+                  1.5781,
+                  2.8025,
+                  0.5708,
+                  2.7881
+                ]
+              }
+            ],
+            "confidence": 0.931,
+            "spans": [
+              {
+                "offset": 238,
+                "length": 14
+              }
+            ]
+          },
+          "CustomerId": {
+            "type": "string",
+            "valueString": "CID-12345",
+            "content": "CID-12345",
+            "boundingRegions": [
+              {
+                "pageNumber": 1,
+                "polygon": [
+                  7.3205,
+                  2.4253,
+                  8.0034,
+                  2.4206,
+                  7.9986,
+                  2.5734,
+                  7.3205,
+                  2.5734
+                ]
+              }
+            ],
+            "confidence": 0.938,
+            "spans": [
+              {
+                "offset": 228,
+                "length": 9
+              }
+            ]
+          },
+          "CustomerName": {
+            "type": "string",
+            "valueString": "MICROSOFT CORPORATION",
+            "content": "MICROSOFT CORPORATION",
+            "boundingRegions": [
+              {
+                "pageNumber": 1,
+                "polygon": [
+                  6.2079,
+                  2.0148,
+                  7.9652,
+                  2.0148,
+                  7.9652,
+                  2.1628,
+                  6.2079,
+                  2.1628
+                ]
+              }
+            ],
+            "confidence": 0.91,
+            "spans": [
+              {
+                "offset": 153,
+                "length": 21
+              }
+            ]
+          },
+          "DueDate": {
+            "type": "date",
+            "valueDate": "2019-12-15",
+            "content": "12/15/2019",
+            "boundingRegions": [
+              {
+                "pageNumber": 1,
+                "polygon": [
+                  7.2393,
+                  1.8047,
+                  7.9938,
+                  1.7999,
+                  7.9938,
+                  1.9527,
+                  7.2393,
+                  1.9527
+                ]
+              }
+            ],
+            "confidence": 0.948,
+            "spans": [
+              {
+                "offset": 127,
+                "length": 10
+              }
+            ]
+          },
+          "InvoiceDate": {
+            "type": "date",
+            "valueDate": "2019-11-15",
+            "content": "11/15/2019",
+            "boundingRegions": [
+              {
+                "pageNumber": 1,
+                "polygon": [
+                  7.2489,
+                  1.5994,
+                  7.9986,
+                  1.5946,
+                  7.9986,
+                  1.7522,
+                  7.2489,
+                  1.7569
+                ]
+              }
+            ],
+            "confidence": 0.947,
+            "spans": [
+              {
+                "offset": 86,
+                "length": 10
+              }
+            ]
+          },
+          "InvoiceId": {
+            "type": "string",
+            "valueString": "INV-100",
+            "content": "INV-100",
+            "boundingRegions": [
+              {
+                "pageNumber": 1,
+                "polygon": [
+                  7.4638,
+                  1.3989,
+                  7.9938,
+                  1.3941,
+                  7.9986,
+                  1.5469,
+                  7.4638,
+                  1.5421
+                ]
+              }
+            ],
+            "confidence": 0.947,
+            "spans": [
+              {
+                "offset": 51,
+                "length": 7
+              }
+            ]
+          },
+          "InvoiceTotal": {
+            "type": "currency",
+            "valueCurrency": {
+              "currencySymbol": "$",
+              "amount": 110.0,
+              "currencyCode": "USD"
+            },
+            "content": "$110.00",
+            "boundingRegions": [
+              {
+                "pageNumber": 1,
+                "polygon": [
+                  7.3683,
+                  7.4575,
+                  7.9174,
+                  7.4527,
+                  7.9174,
+                  7.6198,
+                  7.3683,
+                  7.6246
+                ]
+              }
+            ],
+            "confidence": 0.944,
+            "spans": [
+              {
+                "offset": 806,
+                "length": 7
+              }
+            ]
+          },
+          "Items": {
+            "type": "array",
+            "valueArray": [
+              {
+                "type": "object",
+                "valueObject": {
+                  "Amount": {
+                    "type": "currency",
+                    "valueCurrency": {
+                      "currencySymbol": "$",
+                      "amount": 60.0,
+                      "currencyCode": "USD"
+                    },
+                    "content": "$60.00",
+                    "boundingRegions": [
+                      {
+                        "pageNumber": 1,
+                        "polygon": [
+                          7.4447,
+                          5.6767,
+                          7.9031,
+                          5.6719,
+                          7.9079,
+                          5.8342,
+                          7.4447,
+                          5.8342
+                        ]
+                      }
+                    ],
+                    "confidence": 0.89,
+                    "spans": [
+                      {
+                        "offset": 655,
+                        "length": 6
+                      }
+                    ]
+                  },
+                  "Date": {
+                    "type": "date",
+                    "valueDate": "2021-03-04",
+                    "content": "3/4/2021",
+                    "boundingRegions": [
+                      {
+                        "pageNumber": 1,
+                        "polygon": [
+                          0.573,
+                          5.6671,
+                          1.2177,
+                          5.6623,
+                          1.2177,
+                          5.8342,
+                          0.573,
+                          5.839
+                        ]
+                      }
+                    ],
+                    "confidence": 0.888,
+                    "spans": [
+                      {
+                        "offset": 600,
+                        "length": 8
+                      }
+                    ]
+                  },
+                  "Description": {
+                    "type": "string",
+                    "valueString": "Consulting Services",
+                    "content": "Consulting Services",
+                    "boundingRegions": [
+                      {
+                        "pageNumber": 1,
+                        "polygon": [
+                          2.3256,
+                          5.6719,
+                          3.634,
+                          5.6719,
+                          3.634,
+                          5.839,
+                          2.3256,
+                          5.839
+                        ]
+                      }
+                    ],
+                    "confidence": 0.893,
+                    "spans": [
+                      {
+                        "offset": 614,
+                        "length": 19
+                      }
+                    ]
+                  },
+                  "ProductCode": {
+                    "type": "string",
+                    "valueString": "A123",
+                    "content": "A123",
+                    "boundingRegions": [
+                      {
+                        "pageNumber": 1,
+                        "polygon": [
+                          1.6045,
+                          5.6719,
+                          1.9435,
+                          5.6719,
+                          1.9435,
+                          5.8151,
+                          1.5997,
+                          5.8151
+                        ]
+                      }
+                    ],
+                    "confidence": 0.885,
+                    "spans": [
+                      {
+                        "offset": 609,
+                        "length": 4
+                      }
+                    ]
+                  },
+                  "Quantity": {
+                    "type": "number",
+                    "valueNumber": 2,
+                    "content": "2",
+                    "boundingRegions": [
+                      {
+                        "pageNumber": 1,
+                        "polygon": [
+                          4.5986,
+                          5.6767,
+                          4.6607,
+                          5.6767,
+                          4.6559,
+                          5.8056,
+                          4.5938,
+                          5.8056
+                        ]
+                      }
+                    ],
+                    "confidence": 0.887,
+                    "spans": [
+                      {
+                        "offset": 634,
+                        "length": 1
+                      }
+                    ]
+                  },
+                  "Tax": {
+                    "type": "currency",
+                    "valueCurrency": {
+                      "currencySymbol": "$",
+                      "amount": 6.0,
+                      "currencyCode": "USD"
+                    },
+                    "content": "$6.00",
+                    "boundingRegions": [
+                      {
+                        "pageNumber": 1,
+                        "polygon": [
+                          6.6902,
+                          5.6671,
+                          7.077,
+                          5.6671,
+                          7.077,
+                          5.8247,
+                          6.6902,
+                          5.8294
+                        ]
+                      }
+                    ],
+                    "confidence": 0.887,
+                    "spans": [
+                      {
+                        "offset": 649,
+                        "length": 5
+                      }
+                    ]
+                  },
+                  "Unit": {
+                    "type": "string",
+                    "valueString": "hours",
+                    "content": "hours",
+                    "boundingRegions": [
+                      {
+                        "pageNumber": 1,
+                        "polygon": [
+                          4.8183,
+                          5.6767,
+                          5.2146,
+                          5.6767,
+                          5.2146,
+                          5.8151,
+                          4.8183,
+                          5.8151
+                        ]
+                      }
+                    ],
+                    "confidence": 0.889,
+                    "spans": [
+                      {
+                        "offset": 636,
+                        "length": 5
+                      }
+                    ]
+                  },
+                  "UnitPrice": {
+                    "type": "currency",
+                    "valueCurrency": {
+                      "currencySymbol": "$",
+                      "amount": 30.0,
+                      "currencyCode": "USD"
+                    },
+                    "content": "$30.00",
+                    "boundingRegions": [
+                      {
+                        "pageNumber": 1,
+                        "polygon": [
+                          5.9452,
+                          5.6623,
+                          6.4132,
+                          5.6623,
+                          6.4132,
+                          5.8294,
+                          5.9452,
+                          5.8294
+                        ]
+                      }
+                    ],
+                    "confidence": 0.888,
+                    "spans": [
+                      {
+                        "offset": 642,
+                        "length": 6
+                      }
+                    ]
+                  }
+                },
+                "content": "3/4/2021\nA123\nConsulting Services\n2\nhours\n$30.00\n$6.00\n$60.00",
+                "boundingRegions": [
+                  {
+                    "pageNumber": 1,
+                    "polygon": [
+                      0.573,
+                      5.6623,
+                      7.9079,
+                      5.6623,
+                      7.9079,
+                      5.839,
+                      0.573,
+                      5.839
+                    ]
+                  }
+                ],
+                "confidence": 0.923,
+                "spans": [
+                  {
+                    "offset": 600,
+                    "length": 61
+                  }
+                ]
+              },
+              {
+                "type": "object",
+                "valueObject": {
+                  "Amount": {
+                    "type": "currency",
+                    "valueCurrency": {
+                      "currencySymbol": "$",
+                      "amount": 30.0,
+                      "currencyCode": "USD"
+                    },
+                    "content": "$30.00",
+                    "boundingRegions": [
+                      {
+                        "pageNumber": 1,
+                        "polygon": [
+                          7.4494,
+                          5.9679,
+                          7.9079,
+                          5.9631,
+                          7.9031,
+                          6.1207,
+                          7.4494,
+                          6.1207
+                        ]
+                      }
+                    ],
+                    "confidence": 0.889,
+                    "spans": [
+                      {
+                        "offset": 704,
+                        "length": 6
+                      }
+                    ]
+                  },
+                  "Date": {
+                    "type": "date",
+                    "valueDate": "2021-03-05",
+                    "content": "3/5/2021",
+                    "boundingRegions": [
+                      {
+                        "pageNumber": 1,
+                        "polygon": [
+                          0.5778,
+                          5.9631,
+                          1.2272,
+                          5.9583,
+                          1.232,
+                          6.1254,
+                          0.5778,
+                          6.1254
+                        ]
+                      }
+                    ],
+                    "confidence": 0.888,
+                    "spans": [
+                      {
+                        "offset": 662,
+                        "length": 8
+                      }
+                    ]
+                  },
+                  "Description": {
+                    "type": "string",
+                    "valueString": "Document Fee",
+                    "content": "Document Fee",
+                    "boundingRegions": [
+                      {
+                        "pageNumber": 1,
+                        "polygon": [
+                          2.3251,
+                          5.9727,
+                          3.3045,
+                          5.9694,
+                          3.305,
+                          6.1221,
+                          2.3256,
+                          6.1254
+                        ]
+                      }
+                    ],
+                    "confidence": 0.889,
+                    "spans": [
+                      {
+                        "offset": 676,
+                        "length": 12
+                      }
+                    ]
+                  },
+                  "ProductCode": {
+                    "type": "string",
+                    "valueString": "B456",
+                    "content": "B456",
+                    "boundingRegions": [
+                      {
+                        "pageNumber": 1,
+                        "polygon": [
+                          1.6045,
+                          5.9727,
+                          1.9388,
+                          5.9727,
+                          1.9388,
+                          6.1111,
+                          1.6045,
+                          6.1111
+                        ]
+                      }
+                    ],
+                    "confidence": 0.885,
+                    "spans": [
+                      {
+                        "offset": 671,
+                        "length": 4
+                      }
+                    ]
+                  },
+                  "Quantity": {
+                    "type": "number",
+                    "valueNumber": 3,
+                    "content": "3",
+                    "boundingRegions": [
+                      {
+                        "pageNumber": 1,
+                        "polygon": [
+                          4.589,
+                          5.9774,
+                          4.6559,
+                          5.9774,
+                          4.6559,
+                          6.1016,
+                          4.589,
+                          6.1016
+                        ]
+                      }
+                    ],
+                    "confidence": 0.888,
+                    "spans": [
+                      {
+                        "offset": 689,
+                        "length": 1
+                      }
+                    ]
+                  },
+                  "Tax": {
+                    "type": "currency",
+                    "valueCurrency": {
+                      "currencySymbol": "$",
+                      "amount": 3.0,
+                      "currencyCode": "USD"
+                    },
+                    "content": "$3.00",
+                    "boundingRegions": [
+                      {
+                        "pageNumber": 1,
+                        "polygon": [
+                          6.6949,
+                          5.9583,
+                          7.0817,
+                          5.9583,
+                          7.0817,
+                          6.1207,
+                          6.6949,
+                          6.1207
+                        ]
+                      }
+                    ],
+                    "confidence": 0.887,
+                    "spans": [
+                      {
+                        "offset": 698,
+                        "length": 5
+                      }
+                    ]
+                  },
+                  "UnitPrice": {
+                    "type": "currency",
+                    "valueCurrency": {
+                      "currencySymbol": "$",
+                      "amount": 10.0,
+                      "currencyCode": "USD"
+                    },
+                    "content": "$10.00",
+                    "boundingRegions": [
+                      {
+                        "pageNumber": 1,
+                        "polygon": [
+                          5.9404,
+                          5.9679,
+                          6.4132,
+                          5.9679,
+                          6.4132,
+                          6.1159,
+                          5.9452,
+                          6.1254
+                        ]
+                      }
+                    ],
+                    "confidence": 0.888,
+                    "spans": [
+                      {
+                        "offset": 691,
+                        "length": 6
+                      }
+                    ]
+                  }
+                },
+                "content": "3/5/2021\nB456\nDocument Fee\n3\n$10.00\n$3.00\n$30.00",
+                "boundingRegions": [
+                  {
+                    "pageNumber": 1,
+                    "polygon": [
+                      0.5772,
+                      5.9605,
+                      7.9078,
+                      5.936,
+                      7.9084,
+                      6.1207,
+                      0.5779,
+                      6.1452
+                    ]
+                  }
+                ],
+                "confidence": 0.923,
+                "spans": [
+                  {
+                    "offset": 662,
+                    "length": 48
+                  }
+                ]
+              },
+              {
+                "type": "object",
+                "valueObject": {
+                  "Amount": {
+                    "type": "currency",
+                    "valueCurrency": {
+                      "currencySymbol": "$",
+                      "amount": 10.0,
+                      "currencyCode": "USD"
+                    },
+                    "content": "$10.00",
+                    "boundingRegions": [
+                      {
+                        "pageNumber": 1,
+                        "polygon": [
+                          7.4399,
+                          6.2687,
+                          7.8983,
+                          6.2639,
+                          7.9031,
+                          6.4214,
+                          7.4447,
+                          6.4262
+                        ]
+                      }
+                    ],
+                    "confidence": 0.888,
+                    "spans": [
+                      {
+                        "offset": 759,
+                        "length": 6
+                      }
+                    ]
+                  },
+                  "Date": {
+                    "type": "date",
+                    "valueDate": "2021-03-06",
+                    "content": "3/6/2021",
+                    "boundingRegions": [
+                      {
+                        "pageNumber": 1,
+                        "polygon": [
+                          0.5778,
+                          6.2687,
+                          1.2177,
+                          6.2639,
+                          1.2177,
+                          6.4214,
+                          0.5778,
+                          6.4262
+                        ]
+                      }
+                    ],
+                    "confidence": 0.889,
+                    "spans": [
+                      {
+                        "offset": 711,
+                        "length": 8
+                      }
+                    ]
+                  },
+                  "Description": {
+                    "type": "string",
+                    "valueString": "Printing Fee",
+                    "content": "Printing Fee",
+                    "boundingRegions": [
+                      {
+                        "pageNumber": 1,
+                        "polygon": [
+                          2.3167,
+                          6.2698,
+                          3.1381,
+                          6.2734,
+                          3.1374,
+                          6.4418,
+                          2.316,
+                          6.4381
+                        ]
+                      }
+                    ],
+                    "confidence": 0.89,
+                    "spans": [
+                      {
+                        "offset": 725,
+                        "length": 12
+                      }
+                    ]
+                  },
+                  "ProductCode": {
+                    "type": "string",
+                    "valueString": "C789",
+                    "content": "C789",
+                    "boundingRegions": [
+                      {
+                        "pageNumber": 1,
+                        "polygon": [
+                          1.6045,
+                          6.2687,
+                          1.9388,
+                          6.2687,
+                          1.9388,
+                          6.4167,
+                          1.5997,
+                          6.4167
+                        ]
+                      }
+                    ],
+                    "confidence": 0.885,
+                    "spans": [
+                      {
+                        "offset": 720,
+                        "length": 4
+                      }
+                    ]
+                  },
+                  "Quantity": {
+                    "type": "number",
+                    "valueNumber": 10,
+                    "content": "10",
+                    "boundingRegions": [
+                      {
+                        "pageNumber": 1,
+                        "polygon": [
+                          4.5126,
+                          6.2734,
+                          4.6511,
+                          6.2734,
+                          4.6511,
+                          6.4119,
+                          4.5126,
+                          6.4119
+                        ]
+                      }
+                    ],
+                    "confidence": 0.887,
+                    "spans": [
+                      {
+                        "offset": 738,
+                        "length": 2
+                      }
+                    ]
+                  },
+                  "Tax": {
+                    "type": "currency",
+                    "valueCurrency": {
+                      "currencySymbol": "$",
+                      "amount": 1.0,
+                      "currencyCode": "USD"
+                    },
+                    "content": "$1.00",
+                    "boundingRegions": [
+                      {
+                        "pageNumber": 1,
+                        "polygon": [
+                          6.6902,
+                          6.2639,
+                          7.0626,
+                          6.2639,
+                          7.0626,
+                          6.4167,
+                          6.6902,
+                          6.4167
+                        ]
+                      }
+                    ],
+                    "confidence": 0.887,
+                    "spans": [
+                      {
+                        "offset": 753,
+                        "length": 5
+                      }
+                    ]
+                  },
+                  "Unit": {
+                    "type": "string",
+                    "valueString": "pages",
+                    "content": "pages",
+                    "boundingRegions": [
+                      {
+                        "pageNumber": 1,
+                        "polygon": [
+                          4.8183,
+                          6.283,
+                          5.2289,
+                          6.283,
+                          5.2289,
+                          6.4453,
+                          4.8183,
+                          6.4453
+                        ]
+                      }
+                    ],
+                    "confidence": 0.89,
+                    "spans": [
+                      {
+                        "offset": 741,
+                        "length": 5
+                      }
+                    ]
+                  },
+                  "UnitPrice": {
+                    "type": "currency",
+                    "valueCurrency": {
+                      "currencySymbol": "$",
+                      "amount": 1.0,
+                      "currencyCode": "USD"
+                    },
+                    "content": "$1.00",
+                    "boundingRegions": [
+                      {
+                        "pageNumber": 1,
+                        "polygon": [
+                          6.0264,
+                          6.2591,
+                          6.4228,
+                          6.2543,
+                          6.4228,
+                          6.4167,
+                          6.0264,
+                          6.4214
+                        ]
+                      }
+                    ],
+                    "confidence": 0.889,
+                    "spans": [
+                      {
+                        "offset": 747,
+                        "length": 5
+                      }
+                    ]
+                  }
+                },
+                "content": "3/6/2021\nC789\nPrinting Fee\n10\npages\n$1.00\n$1.00\n$10.00",
+                "boundingRegions": [
+                  {
+                    "pageNumber": 1,
+                    "polygon": [
+                      0.5778,
+                      6.2543,
+                      7.9031,
+                      6.2543,
+                      7.9031,
+                      6.4453,
+                      0.5778,
+                      6.4453
+                    ]
+                  }
+                ],
+                "confidence": 0.923,
+                "spans": [
+                  {
+                    "offset": 711,
+                    "length": 54
+                  }
+                ]
+              }
+            ]
+          },
+          "PreviousUnpaidBalance": {
+            "type": "currency",
+            "valueCurrency": {
+              "currencySymbol": "$",
+              "amount": 500.0,
+              "currencyCode": "USD"
+            },
+            "content": "$500.00",
+            "boundingRegions": [
+              {
+                "pageNumber": 1,
+                "polygon": [
+                  7.3635,
+                  7.7535,
+                  7.9126,
+                  7.7535,
+                  7.9126,
+                  7.911,
+                  7.3635,
+                  7.9158
+                ]
+              }
+            ],
+            "confidence": 0.938,
+            "spans": [
+              {
+                "offset": 838,
+                "length": 7
+              }
+            ]
+          },
+          "PurchaseOrder": {
+            "type": "string",
+            "valueString": "PO-3333",
+            "content": "PO-3333",
+            "boundingRegions": [
+              {
+                "pageNumber": 1,
+                "polygon": [
+                  1.8862,
+                  4.9128,
+                  2.4784,
+                  4.9032,
+                  2.4784,
+                  5.056,
+                  1.8862,
+                  5.056
+                ]
+              }
+            ],
+            "confidence": 0.934,
+            "spans": [
+              {
+                "offset": 541,
+                "length": 7
+              }
+            ]
+          },
+          "RemittanceAddress": {
+            "type": "address",
+            "content": "123 Remit St\nNew York, NY, 10001",
+            "boundingRegions": [
+              {
+                "pageNumber": 1,
+                "polygon": [
+                  0.5683,
+                  9.5486,
+                  1.9961,
+                  9.5486,
+                  1.9961,
+                  9.9258,
+                  0.5683,
+                  9.9258
+                ]
+              }
+            ],
+            "confidence": 0.886,
+            "spans": [
+              {
+                "offset": 920,
+                "length": 32
+              }
+            ],
+            "valueAddress": {
+              "houseNumber": "123",
+              "road": "Remit St",
+              "postalCode": "10001",
+              "city": "New York",
+              "state": "NY",
+              "streetAddress": "123 Remit St"
+            }
+          },
+          "RemittanceAddressRecipient": {
+            "type": "string",
+            "valueString": "Contoso Billing",
+            "content": "Contoso Billing",
+            "boundingRegions": [
+              {
+                "pageNumber": 1,
+                "polygon": [
+                  0.5733,
+                  9.3354,
+                  1.5931,
+                  9.3529,
+                  1.5901,
+                  9.5232,
+                  0.5704,
+                  9.5056
+                ]
+              }
+            ],
+            "confidence": 0.937,
+            "spans": [
+              {
+                "offset": 904,
+                "length": 15
+              }
+            ]
+          },
+          "ServiceAddress": {
+            "type": "address",
+            "content": "123 Service St,\nRedmond WA, 98052",
+            "boundingRegions": [
+              {
+                "pageNumber": 1,
+                "polygon": [
+                  6.1935,
+                  3.9531,
+                  7.65,
+                  3.9531,
+                  7.65,
+                  4.316,
+                  6.1935,
+                  4.316
+                ]
+              }
+            ],
+            "confidence": 0.887,
+            "spans": [
+              {
+                "offset": 402,
+                "length": 15
+              },
+              {
+                "offset": 454,
+                "length": 17
+              }
+            ],
+            "valueAddress": {
+              "houseNumber": "123",
+              "road": "Service St",
+              "postalCode": "98052",
+              "city": "Redmond",
+              "state": "WA",
+              "streetAddress": "123 Service St"
+            }
+          },
+          "ServiceAddressRecipient": {
+            "type": "string",
+            "valueString": "Microsoft Services",
+            "content": "Microsoft Services",
+            "boundingRegions": [
+              {
+                "pageNumber": 1,
+                "polygon": [
+                  6.1983,
+                  3.7424,
+                  7.4549,
+                  3.7478,
+                  7.4542,
+                  3.9108,
+                  6.1976,
+                  3.9054
+                ]
+              }
+            ],
+            "confidence": 0.93,
+            "spans": [
+              {
+                "offset": 357,
+                "length": 18
+              }
+            ]
+          },
+          "ServiceEndDate": {
+            "type": "date",
+            "valueDate": "2019-11-14",
+            "content": "11/14/2019",
+            "boundingRegions": [
+              {
+                "pageNumber": 1,
+                "polygon": [
+                  7.2489,
+                  2.2153,
+                  7.9986,
+                  2.2153,
+                  8.0034,
+                  2.3681,
+                  7.2489,
+                  2.3681
+                ]
+              }
+            ],
+            "confidence": 0.939,
+            "spans": [
+              {
+                "offset": 204,
+                "length": 10
+              }
+            ]
+          },
+          "ServiceStartDate": {
+            "type": "date",
+            "valueDate": "2019-10-14",
+            "content": "10/14/2019",
+            "boundingRegions": [
+              {
+                "pageNumber": 1,
+                "polygon": [
+                  6.3225,
+                  2.2153,
+                  7.077,
+                  2.2153,
+                  7.077,
+                  2.3681,
+                  6.3272,
+                  2.3681
+                ]
+              }
+            ],
+            "confidence": 0.788,
+            "spans": [
+              {
+                "offset": 191,
+                "length": 10
+              }
+            ]
+          },
+          "ShippingAddress": {
+            "type": "address",
+            "content": "123 Ship St,\nRedmond WA, 98052",
+            "boundingRegions": [
+              {
+                "pageNumber": 1,
+                "polygon": [
+                  3.3188,
+                  3.9531,
+                  4.7657,
+                  3.9531,
+                  4.7657,
+                  4.316,
+                  3.3188,
+                  4.316
+                ]
+              }
+            ],
+            "confidence": 0.887,
+            "spans": [
+              {
+                "offset": 389,
+                "length": 12
+              },
+              {
+                "offset": 436,
+                "length": 17
+              }
+            ],
+            "valueAddress": {
+              "houseNumber": "123",
+              "road": "Ship St",
+              "postalCode": "98052",
+              "city": "Redmond",
+              "state": "WA",
+              "streetAddress": "123 Ship St"
+            }
+          },
+          "ShippingAddressRecipient": {
+            "type": "string",
+            "valueString": "Microsoft Delivery",
+            "content": "Microsoft Delivery",
+            "boundingRegions": [
+              {
+                "pageNumber": 1,
+                "polygon": [
+                  3.3094,
+                  3.7317,
+                  4.5865,
+                  3.7478,
+                  4.5843,
+                  3.9245,
+                  3.3072,
+                  3.9084
+                ]
+              }
+            ],
+            "confidence": 0.93,
+            "spans": [
+              {
+                "offset": 338,
+                "length": 18
+              }
+            ]
+          },
+          "SubTotal": {
+            "type": "currency",
+            "valueCurrency": {
+              "currencySymbol": "$",
+              "amount": 100.0,
+              "currencyCode": "USD"
+            },
+            "content": "$100.00",
+            "boundingRegions": [
+              {
+                "pageNumber": 1,
+                "polygon": [
+                  7.3635,
+                  6.8559,
+                  7.9126,
+                  6.8511,
+                  7.9126,
+                  7.0182,
+                  7.3635,
+                  7.0182
+                ]
+              }
+            ],
+            "confidence": 0.946,
+            "spans": [
+              {
+                "offset": 775,
+                "length": 7
+              }
+            ]
+          },
+          "TotalTax": {
+            "type": "currency",
+            "valueCurrency": {
+              "currencySymbol": "$",
+              "amount": 10.0,
+              "currencyCode": "USD"
+            },
+            "content": "$10.00",
+            "boundingRegions": [
+              {
+                "pageNumber": 1,
+                "polygon": [
+                  7.4494,
+                  7.1519,
+                  7.9222,
+                  7.1519,
+                  7.927,
+                  7.3142,
+                  7.4494,
+                  7.319
+                ]
+              }
+            ],
+            "confidence": 0.945,
+            "spans": [
+              {
+                "offset": 793,
+                "length": 6
+              }
+            ]
+          },
+          "VendorAddress": {
+            "type": "address",
+            "content": "123 456th St\nNew York, NY, 10001",
+            "boundingRegions": [
+              {
+                "pageNumber": 1,
+                "polygon": [
+                  0.5683,
+                  1.6042,
+                  1.9913,
+                  1.6042,
+                  1.9913,
+                  1.9813,
+                  0.5683,
+                  1.9813
+                ]
+              }
+            ],
+            "confidence": 0.886,
+            "spans": [
+              {
+                "offset": 59,
+                "length": 12
+              },
+              {
+                "offset": 97,
+                "length": 19
+              }
+            ],
+            "valueAddress": {
+              "houseNumber": "123",
+              "road": "456th St",
+              "postalCode": "10001",
+              "city": "New York",
+              "state": "NY",
+              "streetAddress": "123 456th St"
+            }
+          },
+          "VendorAddressRecipient": {
+            "type": "string",
+            "valueString": "Contoso Headquarters",
+            "content": "Contoso Headquarters",
+            "boundingRegions": [
+              {
+                "pageNumber": 1,
+                "polygon": [
+                  0.5738,
+                  1.3969,
+                  2.1162,
+                  1.4036,
+                  2.1154,
+                  1.5798,
+                  0.573,
+                  1.5731
+                ]
+              }
+            ],
+            "confidence": 0.937,
+            "spans": [
+              {
+                "offset": 21,
+                "length": 20
+              }
+            ]
+          },
+          "VendorName": {
+            "type": "string",
+            "valueString": "CONTOSO LTD.",
+            "content": "CONTOSO LTD.",
+            "boundingRegions": [
+              {
+                "pageNumber": 1,
+                "polygon": [
+                  0.5778,
+                  0.6456,
+                  2.3356,
+                  0.6493,
+                  2.3351,
+                  0.9023,
+                  0.5773,
+                  0.8985
+                ]
+              }
+            ],
+            "confidence": 0.929,
+            "spans": [
+              {
+                "offset": 0,
+                "length": 12
+              }
+            ]
+          }
+        },
+        "confidence": 1,
+        "spans": [
+          {
+            "offset": 0,
+            "length": 952
+          }
+        ]
+      }
+    ]
+  }
+}
