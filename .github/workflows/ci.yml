@@ -27,7 +27,12 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      # 4) Basic validation: check Python syntax
+      # 4) Run tests
+      - name: Run tests
+        run: |
+          pytest
+
+      # 5) Basic validation: check Python syntax
       - name: Validate Python files (compile)
         run: |
           python -m compileall src invoice_extractor
