@@ -27,10 +27,10 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      # 4) Run tests
-      - name: Run tests
+      # 4) Run tests with coverage
+      - name: Run tests with coverage
         run: |
-          pytest
+        pytest --cov=src --cov=fastapi_app --cov-report=term-missing
 
       # 5) Basic validation: check Python syntax
       - name: Validate Python files (compile)

@@ -1,0 +1,3 @@
+[run]
+omit =
+    src/extraction/manual_extract_local.py

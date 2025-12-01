@@ -33,3 +33,7 @@ Thumbs.db
 # PyCharm / JetBrains
 *.iml
 .idea/
+
+# Coverage output
+.coverage
+htmlcov/
