@@ -3,6 +3,7 @@ requests
 python-dotenv
 pytest
 fastapi
+httpx
 uvicorn[standard]
 python-multipart
 pytest-cov
