@@ -3,6 +3,8 @@ import json
 
 import azure.functions as func
 
+from src.extraction.service import process_invoice_bytes
+
 # IMPORTANT: import from your main src package
 from src.extraction.extract_invoice import extract_invoice
 from src.extraction.normalize_output import normalize_invoice
@@ -39,35 +41,21 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
                 status_code=400,
             )
 
-        # 2. Call Azure Document Intelligence
-        logging.info("Sending PDF to Azure Document Intelligence...")
+        # 2. Call core service logic
+        logging.info("Processing invoice bytes via Azure Document Intelligence.")
         try:
-            raw_result = extract_invoice(pdf_bytes)
+            normalized = process_invoice_bytes(pdf_bytes)
         except Exception as e:
-            logging.error(f"Error calling Document Intelligence: {e}")
+            logging.error(f"Error during invoice processing: {e}")
             return _json_response(
                 {
-                    "error": "Failed to extract invoice using Azure Document Intelligence.",
+                    "error": "Failed to process invoice.",
                     "details": str(e),
                 },
                 status_code=502,
             )
 
-        # 3. Normalize the result
-        logging.info("Normalizing extraction result...")
-        try:
-            normalized = normalize_invoice(raw_result)
-        except Exception as e:
-            logging.error(f"Error normalizing invoice result: {e}")
-            return _json_response(
-                {
-                    "error": "Failed to normalize invoice result.",
-                    "details": str(e),
-                },
-                status_code=500,
-            )
-
-        # 4. Success response
+        # 3. Success response
         logging.info(
             "Invoice extraction completed successfully. "
             f"invoice_id={normalized.get('invoice_id')!r}, "
