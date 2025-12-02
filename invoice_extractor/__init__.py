@@ -5,10 +5,6 @@ import azure.functions as func
 
 from src.extraction.service import process_invoice_bytes
 
-# IMPORTANT: import from your main src package
-from src.extraction.extract_invoice import extract_invoice
-from src.extraction.normalize_output import normalize_invoice
-
 def main(req: func.HttpRequest) -> func.HttpResponse:
     """
     Azure Function HTTP trigger:
