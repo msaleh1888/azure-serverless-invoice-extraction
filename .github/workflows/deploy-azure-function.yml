@@ -1,0 +1,35 @@
+name: Deploy Azure Function (invoice extractor)
+
+on:
+  # Deploy when a version tag is pushed, e.g. v0.4.0, v1.0.0
+  push:
+    tags:
+      - "v*.*.*"
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      # Install deps & run a quick smoke test before deploy
+      # (You can remove this block if you want deployments to be faster)
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+    
+      # Real deployment step
+      - name: Deploy to Azure Functions
+        uses: azure/functions-action@v1
+        with:
+          app-name: msaleh-invoice-extractor
+          package: .
+          publish-profile: ${{ secrets.AZURE_FUNCTIONAPP_PUBLISH_PROFILE }}
