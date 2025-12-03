@@ -35,4 +35,4 @@ jobs:
       # 5) Basic validation: check Python syntax
       - name: Validate Python files (compile)
         run: |
-          python -m compileall src invoice_extractor
+          python -m compileall src fastapi_app functions
