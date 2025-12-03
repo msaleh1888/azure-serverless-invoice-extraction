@@ -35,3 +35,21 @@ jobs:
           publish-profile: ${{ secrets.AZURE_FUNCTIONAPP_PUBLISH_PROFILE }}
           sku: flexconsumption
           remote-build: true
+      
+      # Post-deploy health check
+      - name: Post-deploy health check
+        run: |
+          HEALTH_URL="https://msaleh-invoice-extractor-cfcafygge9heg7hc.westeurope-01.azurewebsites.net/api/health"
+          echo "Checking health endpoint: $HEALTH_URL"
+
+          # Call the health endpoint and capture only the HTTP status code
+          STATUS=$(curl -s -o /dev/null -w "%{http_code}" "$HEALTH_URL")
+          echo "Status code: $STATUS"
+
+          # Fail the job if the health endpoint is not OK
+          if [ "$STATUS" -ne 200 ]; then
+            echo "::error::Health check failed after deploy with status $STATUS"
+            exit 1
+          else
+            echo "✅ Health OK after deploy"
+          fi
