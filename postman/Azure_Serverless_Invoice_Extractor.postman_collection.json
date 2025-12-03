@@ -1,0 +1,20 @@
+{
+	"info": {
+		"_postman_id": "189d51d6-a480-45cb-a386-2cb5bfa45a49",
+		"name": "Azure Serverless Invoice Extractor",
+		"description": "API that takes a PDF invoice and returns normalized JSON using Azure Document Intelligence.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "50527350",
+		"_collection_link": "https://mahmoud-saleh1888-3447728.postman.co/workspace/Mahmoud-Saleh's-Workspace~00080928-7e7f-4639-8657-26a99728f3f6/collection/50527350-189d51d6-a480-45cb-a386-2cb5bfa45a49?action=share&source=collection_link&creator=50527350"
+	},
+	"item": [
+		{
+			"name": "POST – Extract invoice (Azure)",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
