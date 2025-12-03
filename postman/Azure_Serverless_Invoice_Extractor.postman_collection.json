@@ -11,8 +11,30 @@
 		{
 			"name": "POST – Extract invoice (Azure)",
 			"request": {
-				"method": "GET",
-				"header": []
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/pdf",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "file",
+					"file": {
+						"src": ""
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/invoice-extractor",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"invoice-extractor"
+					]
+				}
 			},
 			"response": []
 		}
