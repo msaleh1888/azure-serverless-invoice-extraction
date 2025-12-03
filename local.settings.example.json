@@ -3,8 +3,8 @@
   "Values": {
     "AzureWebJobsStorage": "UseDevelopmentStorage=true",
     "FUNCTIONS_WORKER_RUNTIME": "python",
-
-    "DOCINT_ENDPOINT": "https://<your-doc-int-resource>.cognitiveservices.azure.com",
-    "DOCINT_KEY": "<your-document-intelligence-key>"
+    "DOCINT_ENDPOINT": "https://<your-docint-resource>.cognitiveservices.azure.com/",
+    "DOCINT_KEY": "<your-docint-key>",
+    "APP_VERSION": "v0.0.0-local"
   }
 }

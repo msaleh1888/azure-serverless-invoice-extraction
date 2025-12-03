@@ -1,91 +1,187 @@
-# Azure Invoice Extraction Service
+# Azure Serverless Invoice Extraction API
 
-A lightweight, production-friendly backend service for **extracting structured invoice data from PDF files** using **Azure Document Intelligence (prebuilt-invoice)** and serving it through an **Azure Functions HTTP API**.
+A production-style **serverless invoice extraction API** built with:
 
-This project is part of a professional AI/Cloud portfolio and demonstrates:
-- Cloud AI integration  
-- Serverless architecture  
-- Clean Python engineering  
-- Real-world invoice automation use cases  
+- **Azure Functions (Python)** — lightweight, auto-scaling, cost-efficient.
+- **Azure Document Intelligence (Prebuilt Invoice)** — extracts invoice fields with high accuracy.
+- **GitHub Actions CI/CD** — automated testing, tag-based deployments, post-deploy health validation.
+- **Application Insights** — availability tests, alerts, and telemetry.
+
+Upload any PDF invoice → get back **clean, normalized JSON** containing header fields, vendor info, totals, currency, and line items.
 
 ---
 
-## What This Service Does
+## Features
 
-It takes a **PDF invoice** as input and returns clean, structured JSON containing:
+### AI-Powered Invoice Extraction
+- Calls **Azure Document Intelligence v4** (`2023-07-31` API)
+- Extracts structured fields:
+  - invoice ID, dates, totals, vendor/customer info
+  - currencies, taxes
+  - line items (description, quantity, price, amount)
+  - confidence scores
 
-- Invoice ID  
-- Invoice Date / Due Date  
-- Vendor Name  
-- Customer Name  
-- Total Amount  
-- Tax Amount  
-- Line Items (description, quantity, price, amount)  
-- Overall extraction confidence  
+### Serverless Architecture
+- Azure Functions (Flex Consumption)
+- Fast cold starts, low cost, auto-scale on demand
+- Stateless design
 
-This replaces manual data entry and enables automation in:
-- Accounting workflows  
-- ERP/finance integrations  
-- Back-office operations  
-- Expense management apps  
+### Clean & Maintainable Code
+- Shared extraction service: `process_invoice_bytes()`  
+- Clear separation of:
+  - HTTP layer (Azure Functions)
+  - Business logic (`src/extraction`)
+  - Normalization (`normalize_output.py`)
+
+### Reliability & Observability
+- `/api/health` readiness endpoint
+- Application Insights **Standard Availability Test** (every 5 minutes)
+- Alert rule: **failed locations ≥ 1**
+- GitHub Actions **post-deploy health check**
+- Full CI pipeline with pytest + compile checks
 
 ---
 
 ## Architecture Overview
 
-**Flow:**
+```mermaid
+flowchart TB
 
+    subgraph ClientSide
+        C[Client: app or script]
+    end
+
+    subgraph FunctionApp["Azure Function App: msaleh-invoice-extractor"]
+        direction TB
+        F[HTTP trigger: invoice_extractor]
+        H[HTTP GET: health_check]
+    end
+
+    subgraph ExtractionService["Extraction service (src/extraction)"]
+        direction TB
+        S["process_invoice_bytes()"]
+        E[extract_invoice.py]
+        N[normalize_output.py]
+    end
+
+    subgraph Cognitive["Azure Document Intelligence"]
+        D[Prebuilt invoice model]
+    end
+
+    C -->|POST PDF /api/invoice-extractor| F
+    F --> S
+    S --> E
+    E -->|REST API call with endpoint and key| D
+    D -->|Raw JSON result| E
+    E --> N
+    N -->|Normalized invoice JSON| F
+    F -->|HTTP 200 + JSON| C
+
+    H -->|Health JSON| C
 ```
-Client → Azure Function (HTTP POST) → Azure Document Intelligence  
-      → Normalization Layer → JSON Response
-```
-
-The Azure Function:
-1. Accepts raw PDF bytes  
-2. Sends them to Azure Document Intelligence  
-3. Polls until extraction is done  
-4. Normalizes the data into a predictable structure  
-5. Returns JSON to the client  
-
-Works locally using **Docker** and fully deployable to Azure.
 
 ---
 
 ## 📂 Project Structure
 
-```
+```text
 .
-├── host.json
-├── local.settings.json            # Not committed (contains secrets)
-├── requirements.txt
-├── .env                           # For local testing scripts
-│
-├── invoice_extractor/             # Azure Function (HTTP trigger)
-│   ├── __init__.py
-│   └── function.json
-│
+├── .github/
+│   └── workflows/
+│       ├── ci.yml                     # Tests, coverage, compile check
+│       └── deploy-azure-function.yml  # Tag-based deploy + health verification
+├── azure/
+│   ├── architecture.md
+│   ├── system_design.md
+│   └── API_REFERENCE.md
+├── fastapi_app/
+│   ├── main.py                        # Optional FastAPI version
+│   └── README.md                      # Description of FastAPI usage
+├── functions/
+│   ├── host.json
+│   ├── requirements.txt
+│   ├── invoice_extractor/
+│   │   ├── __init__.py                # Azure Function (HTTP POST)
+│   │   └── function.json
+│   └── health_check/
+│       ├── __init__.py                # /api/health endpoint
+│       └── function.json
 ├── src/
 │   └── extraction/
-│       ├── extract_invoice.py
-│       ├── normalize_output.py
-│       └── test_extract_local.py
-│
-├── azure/
-│   ├── API_REFERENCE.md
-│   ├── architecture.md
-│   └── system_design.md
-│
-└── samples/
-    ├── example_invoice_1.pdf
-    ├── raw_output_example.json
-    └── normalized_output_example.json
+│       ├── extract_invoice.py         # Calls Azure DI REST API
+│       ├── normalize_output.py        # Cleans & structures DI output
+│       └── service.py                 # process_invoice_bytes()
+├── tests/                             # Pytest suite
+├── postman/                           # Postman ready to import environment and collection
+├── samples/
+│   ├── example_invoice_1.pdf
+└── README.md
 ```
 
 ---
 
-## Running Locally (Docker)
+## Testing with Postman
 
-### 1. Ensure `local.settings.json` contains your Azure DI keys:
+This project includes ready‑to‑use Postman files under:
+
+```
+/postman/
+├── Azure_Serverless_Invoice_Extractor.postman_collection.json
+└── Invoice_API_Production.postman_environment.json
+```
+
+### 1. Import into Postman
+- Open Postman → **Import**
+- Select both files from `/postman`
+- Postman creates:
+  - **Collection**: Invoice Extraction API  
+  - **Environment**: Invoice_API_Production  
+
+### 2. Select Environment
+Choose the environment in the top‑right of Postman.
+
+To test locally:
+```
+base_url = http://localhost:7071
+```
+
+To test production:
+```
+base_url = https://<your-function>.azurewebsites.net
+```
+
+### 3. Test Invoice Extraction
+- Open **POST – Invoice Extractor**
+- Body → **Binary** → select a PDF (e.g. `samples/example_invoice_1.pdf`)
+- Click **Send**
+- You receive normalized JSON.
+
+### 4. Test Health Check
+- Open **GET – Health Check**
+- Click **Send**
+- Expect:
+```json
+{"status": "ok", "...": "..."}
+```
+
+This allows quick and reliable testing of both local and deployed versions of the API.
+
+---
+
+## Local Development
+
+### 1. Install dependencies
+
+```bash
+cd functions
+python -m venv .venv
+source .venv/bin/activate  # Windows: .venv\Scripts\activate
+pip install -r functions/requirements.txt
+```
+
+### 2. Configure environment variables
+
+Create `functions/local.settings.json`:
 
 ```json
 {
@@ -93,134 +189,122 @@ Works locally using **Docker** and fully deployable to Azure.
   "Values": {
     "AzureWebJobsStorage": "UseDevelopmentStorage=true",
     "FUNCTIONS_WORKER_RUNTIME": "python",
-    "DOCINT_ENDPOINT": "https://<your-resource>.cognitiveservices.azure.com",
-    "DOCINT_KEY": "<your-key>"
+    "DOCINT_ENDPOINT": "https://<your-resource>.cognitiveservices.azure.com/",
+    "DOCINT_KEY": "<your-key>",
+    "APP_VERSION": "v0.0.0-local"
   }
 }
 ```
 
-### 2. Install dependencies for Azure Functions runtime:
+### 3. Run Azure Functions host locally
 
 ```bash
-python -m pip install --target .python_packages/lib/site-packages requests python-dotenv
-```
-
-### 3. Start the Function locally (PowerShell):
-
-```powershell
-docker run --rm -it `
-  -p 7071:80 `
-  -v D:\GitHub\06_invoice-extraction-azure:/home/site/wwwroot `
-  -e AzureWebJobsScriptRoot=/home/site/wwwroot `
-  mcr.microsoft.com/azure-functions/python:4-python3.10
-```
-
-You should see:
-
-```
-Found the following functions:
-    invoice_extractor
+func start
 ```
 
 ---
 
-## Test the API
+## Testing the API (curl)
+
+### Extract an invoice
 
 ```bash
-curl -X POST ^
-  -H "Content-Type: application/pdf" ^
-  --data-binary @samples/example_invoice_1.pdf ^
-  http://localhost:7071/api/invoice-extractor
+curl -X POST   -H "Content-Type: application/pdf"   --data-binary "@samples/example_invoice_1.pdf"   "http://localhost:7071/api/invoice-extractor"
 ```
 
-Example response:
+### Health check
+
+```bash
+curl http://localhost:7071/api/health
+```
+
+---
+
+## Production Deployment (GitHub Actions → Azure Functions)
+
+Deployments are **tag-driven**.
+
+### 1. Create a new version tag
+
+```bash
+git tag v1.0.0
+git push origin main --tags
+```
+
+### 2. GitHub Actions workflow does the rest:
+
+- Installs deps  
+- Copies `src/` into the packaged folder  
+- Deploys `/functions` to Azure  
+- **Calls `/api/health` after deploy**:
+  - If not 200 → deploy fails  
+  - Prevents broken releases from going live  
+
+---
+
+## Monitoring, Availability & Alerts
+
+### 1. `/api/health` endpoint  
+Returns:
 
 ```json
 {
-  "invoice_id": "INV-100",
-  "invoice_date": "2019-11-15",
-  "due_date": "2019-12-15",
-  "vendor_name": "CONTOSO LTD.",
-  "customer_name": "MICROSOFT CORPORATION",
-  "total_amount": 110.0,
-  "total_tax": 10.0,
-  "items": [
-    {
-      "description": "Consulting Services",
-      "quantity": 2,
-      "unit_price": 30.0,
-      "amount": 60.0
-    }
-  ],
-  "confidence": 1
+  "status": "ok",
+  "service": "invoice-extraction-api",
+  "timestamp_utc": "2025-12-03T19:00:00Z",
+  "version": "v1.0.0",
+  "checks": [
+    { "name": "environment", "status": "ok" },
+    { "name": "document_intelligence", "status": "ok" }
+  ]
 }
+```
+
+### 2. Application Insights — Availability Test
+- Tests `/api/health` every 5 minutes from multiple regions
+- Measures uptime & latency
+
+### 3. Alert Rule
+Triggers when:
+
+```
+failed_locations ≥ 1
 ```
 
 ---
 
-## API Reference
+## API Summary
 
-### **POST** `/api/invoice-extractor`
+### `POST /api/invoice-extractor`
+- Input: PDF (`Content-Type: application/pdf`)
+- Output: Normalized JSON
+- Status:
+  - 200 → Success
+  - 400 → Invalid input
+  - 500 → Failure contacting Azure DI
 
-#### Request
-- **Content-Type:** `application/pdf`
-- **Body:** binary PDF file content
-
-#### Response
-- **200 OK** + JSON with extracted invoice fields  
-- **400** if no PDF  
-- **500** if extraction fails on Azure DI  
-
----
-
-## Technology Stack
-
-- **Python**  
-- **Azure Functions (HTTP Trigger)**  
-- **Azure Document Intelligence (Prebuilt-Invoice)**  
-- **Docker**  
-- **REST APIs**  
+### `GET /api/health`
+- Simple readiness check
+- Returns 200 if healthy
 
 ---
 
-## Why This Project Exists
-
-Many organizations still rely on manual data entry for processing supplier invoices.
-This creates bottlenecks in accounting, operations, and finance workflows.
-
-This project demonstrates how **cloud-based AI** and **serverless backend architecture** can automate that process:
-
-- PDF invoices → extracted → structured JSON
-
-- Removes manual typing
-
-- Enables automation in ERP, finance, and analytics systems
-
-- Provides consistent, machine-readable data even when invoice formats differ
-
-It’s a practical example of applying AI to a real business challenge.
+## Roadmap
+- Add ruff linting  
+- Add coverage thresholds  
+- Blob-trigger for batch invoices  
+- Persist extraction results  
+- Add authentication  
 
 ---
 
-## Future Improvements
+## Portfolio Summary
 
-Potential enhancements for future versions include:
+This project demonstrates:
 
-- Support for multiple invoices inside a single PDF
-
-- Automatic validation of extracted fields (detect missing totals, dates, line items)
-
-- Batch processing for bulk invoice ingestion
-
-- Public deployment to Azure Function App
-
-- Adding an authentication layer for production use
-
-- Integrations with accounting tools (SAP, QuickBooks, Odoo, Xero)
-
-- Adding a simple web UI for uploading invoices and viewing results
-
-- Converting the normalized JSON output into CSV or Excel exports
-
-- Storing processed invoices in Azure Blob Storage or a database
-
+- Serverless architecture  
+- Intelligent document processing  
+- Azure Functions & Azure Document Intelligence  
+- CI/CD pipelines  
+- Monitoring, availability & alerts  
+- Clean, testable Python design  

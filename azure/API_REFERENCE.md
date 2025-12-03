@@ -2,82 +2,153 @@
 
 This document describes the HTTP API exposed by the **Azure Invoice Extraction Service**.
 
+The service consists of:
+
+- An **Azure Functions** app with:
+  - `invoice_extractor` — POST endpoint that accepts a PDF invoice and returns normalized JSON.
+  - `health_check` — lightweight GET endpoint used by uptime tests and deployment pipelines.
+- Supporting Python modules in `src/extraction/` that encapsulate the business logic.
+
 ---
 
-## 1. Base URL
+## 1. Base URLs
 
-### Local (Docker)
+### Local development (Azure Functions Core Tools)
 
 ```text
 http://localhost:7071
 ```
 
-### Cloud (Azure Function App, when deployed)
+When running locally with `func start`, Azure Functions automatically prefixes all routes with `/api`.
+
+### Cloud (Azure Function App)
 
 ```text
-https://<your-func-app>.azurewebsites.net
+https://msaleh-invoice-extractor-cfcafygge9heg7hc.westeurope-01.azurewebsites.net
 ```
 
-Replace `<your-func-app>` with the name of your Function App.
+In the rest of this document we refer to this as `{BASE_URL}`.
+
+> **Note**  
+> The host name will be different if you fork this repo and deploy your own Function App. Replace it accordingly.
 
 ---
 
-## 2. Endpoint Overview
+## 2. Endpoints overview
 
-### `POST /api/invoice-extractor`
+| Endpoint                       | Method | Description                                                  |
+| ----------------------------- | ------ | ------------------------------------------------------------ |
+| `/api/health`                 | GET    | Lightweight health probe used by uptime tests and CI/CD.     |
+| `/api/invoice-extractor`      | POST   | Main API. Accepts a PDF invoice and returns normalized JSON. |
 
-Extracts structured invoice data from a PDF file and returns normalized JSON.
-
-- **Method:** `POST`
-- **Path:** `/api/invoice-extractor`
-- **Auth:**  
-  - Local: `anonymous` (no key required)  
-  - Cloud: can be configured as `function` or `anonymous` depending on deployment
-- **Content-Type:** `application/pdf`
-- **Body:** binary PDF file contents
+All endpoints are currently **anonymous** (no authentication) and are intended for demo / portfolio use. For production, you should enable authentication and authorization.
 
 ---
 
-## 3. Request Specification
+## 3. Health check — `GET /api/health`
 
-### Headers
+### Purpose
+
+- Verify that the Function App is running.
+- Expose the currently deployed application version.
+- Provide a simple JSON payload that can be used by:
+  - **Application Insights availability tests**
+  - **GitHub Actions post‑deploy smoke tests**
+  - External uptime monitors
+
+### Request
 
 ```http
+GET {BASE_URL}/api/health
+```
+
+No body is required.
+
+### Successful response
+
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json
+```
+
+```json
+{
+  "status": "ok",
+  "source": "azure-function-health-check",
+  "app_version": "v0.4.0",
+  "timestamp_utc": "2025-12-03T19:10:21Z"
+}
+```
+
+Fields:
+
+- `status`: `"ok"` when the function is healthy.
+- `source`: Identifier of this health probe.
+- `app_version`: Value of the `APP_VERSION` environment variable (set from the latest Git tag).
+- `timestamp_utc`: Time when the health check response was generated.
+
+### Error responses
+
+The health check is intentionally simple. Typical failures you would see in clients / monitors:
+
+- `5xx` — Function App is down or throwing unhandled exceptions.
+- Timeout — Function App is not responding within the configured SLA.
+
+---
+
+## 4. Invoice extraction — `POST /api/invoice-extractor`
+
+### Purpose
+
+Accept a **single PDF invoice** and return a clean, normalized JSON representation based on Azure Document Intelligence's **prebuilt invoice** model.
+
+### Request
+
+```http
+POST {BASE_URL}/api/invoice-extractor
 Content-Type: application/pdf
 ```
 
-### Body
+#### Body
 
 - Raw binary content of a **single invoice PDF**.
 - Multi-page invoices are supported by Azure Document Intelligence.
+- Maximum file size is constrained by your Function App plan and HTTP limits (not enforced by code).
 
-#### Example (PowerShell)
-
-```powershell
-curl.exe -X POST `
-  -H "Content-Type: application/pdf" `
-  --data-binary "@samples/example_invoice_1.pdf" `
-  http://localhost:7071/api/invoice-extractor
-```
-
-#### Example (Git Bash / Linux)
+#### Example (curl — local)
 
 ```bash
-curl -X POST   -H "Content-Type: application/pdf"   --data-binary @samples/example_invoice_1.pdf   http://localhost:7071/api/invoice-extractor
+curl -i   -H "Content-Type: application/pdf"   --data-binary "@samples/example_invoice_1.pdf"   "http://localhost:7071/api/invoice-extractor"
 ```
 
----
+#### Example (curl — cloud)
 
-## 4. Response Specification
+```bash
+curl -i   -H "Content-Type: application/pdf"   --data-binary "@samples/example_invoice_1.pdf"   "https://msaleh-invoice-extractor-cfcafygge9heg7hc.westeurope-01.azurewebsites.net/api/invoice-extractor"
+```
 
-### 4.1 Success Response
+### Successful response
 
-- **Status:** `200 OK`
-- **Content-Type:** `application/json`
+On success the function:
 
-#### Example
+1. Reads the raw PDF bytes from the request.
+2. Calls `process_invoice_bytes(pdf_bytes)` in `src/extraction/service.py`, which:
+   - Sends the PDF to **Azure Document Intelligence** (`extract_invoice(...)`).
+   - Normalizes the raw result with `normalize_invoice(...)`.
+3. Returns the normalized JSON with HTTP **200 OK**.
 
-```json
+#### Status
+
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json
+```
+
+#### Body (example)
+
+The exact shape depends on the invoice, but the normalized schema is:
+
+```jsonc
 {
   "invoice_id": "INV-100",
   "invoice_date": "2019-11-15",
@@ -107,77 +178,113 @@ curl -X POST   -H "Content-Type: application/pdf"   --data-binary @samples/examp
       "amount": 10.0
     }
   ],
-  "confidence": 1
+  "confidence": 1.0
 }
 ```
+
+Field semantics:
+
+- `invoice_id` — Invoice number, if recognized.
+- `invoice_date` — ISO‑8601 invoice date.
+- `due_date` — ISO‑8601 due date (if available).
+- `vendor_name` / `vendor_address` — Supplier information.
+- `customer_name` — Buyer name.
+- `total_amount` — Grand total including tax.
+- `total_tax` — Total tax amount (if parsed).
+- `items[]` — Line items:
+  - `description` — Item / service description.
+  - `quantity` — Numeric quantity.
+  - `unit_price` — Unit price.
+  - `amount` — Line total.
+- `confidence` — Internal confidence score (0–1) derived from Azure Document Intelligence.
 
 ---
 
-## 5. Error Responses
+## 5. Error handling
 
-### 5.1 `400 Bad Request` — Empty or Invalid Input
+The Azure Function uses a small helper (`_json_response`) to ensure that **all responses are JSON**, even on error.
 
-#### Case: Empty Body
+### Common HTTP status codes
 
-```json
+| Status | When it happens                                                                 |
+| ------ | ------------------------------------------------------------------------------- |
+| `200`  | Invoice parsed successfully.                                                    |
+| `400`  | Bad request (e.g. empty body, invalid PDF, or validation error).               |
+| `405`  | Wrong HTTP method (anything other than `POST` for `/api/invoice-extractor`).   |
+| `415`  | Unsupported media type (e.g. missing or non‑PDF `Content-Type`).               |
+| `500`  | Unexpected server error (uncaught exception).                                   |
+| `502`/`503` | Downstream issue calling Azure Document Intelligence.                     |
+
+> The precise mapping depends on the exception raised inside `extract_invoice(...)` and `normalize_invoice(...)`. Those internals are intentionally hidden behind `process_invoice_bytes(...)`.
+
+### Error payload format
+
+On error the response body has a consistent structure:
+
+```jsonc
 {
-  "error": "Request body is empty. Please POST a PDF file."
+  "error": "Human readable summary of the problem.",
+  "details": "Optional, more technical description for logs / debugging."
 }
 ```
 
-#### Case: Wrong Content-Type
+Examples:
 
 ```json
 {
-  "error": "Unsupported content type. Please send a PDF with Content-Type: application/pdf."
+  "error": "Empty request body. Please POST a PDF file.",
+  "details": "Received 0 bytes in request body."
 }
 ```
-
----
-
-### 5.2 `502 Bad Gateway` — Azure Document Intelligence Failure
-
-Occurs if:
-- Wrong endpoint/key
-- Azure DI service issue
-- Network failure
-
-```json
-{
-  "error": "Failed to extract invoice using Azure Document Intelligence.",
-  "details": "<underlying error message>"
-}
-```
-
----
-
-### 5.3 `500 Internal Server Error` — Unexpected Errors
-
-Catch-all for unhandled internal errors.
 
 ```json
 {
   "error": "Unexpected server error.",
-  "details": "<exception message>"
+  "details": "Traceback or message from the underlying exception."
 }
 ```
 
 ---
 
-## 6. Usage Scenarios
+## 6. CI / CD & automated health checks
 
-- Back-office automation  
-- ERP/accounting integration (SAP, QuickBooks, Odoo, etc.)  
-- Data pipelines (store invoice data in a database)  
-- Reporting & analytics  
-- SaaS invoice processing services  
+Two GitHub Actions workflows support the API:
+
+1. **`ci.yml`** — runs on every push and pull request:
+   - Sets up Python.
+   - Installs dependencies.
+   - Runs tests with coverage (`pytest --cov=src --cov=fastapi_app`).
+   - Compiles Python modules (`python -m compileall`) as a basic syntax check.
+
+2. **`deploy-azure-function.yml`** — runs on version tags (e.g. `v0.4.0`):
+   - Builds the Azure Functions app from the `functions/` folder.
+   - Deploys using `azure/functions-action@v1` and a publish profile.
+   - Sets the `APP_VERSION` setting based on the Git tag.
+   - Performs a **post‑deploy health check** by calling `{BASE_URL}/api/health`.  
+     The deployment is marked as failed if the health check does not return HTTP 200.
+
+These workflows make the invoice extraction API:
+
+- **Repeatable** — deployments are tag‑driven.
+- **Observable** — health checks run both from GitHub Actions and Application Insights.
+- **Safe to evolve** — tests and syntax checks run before every merge.
 
 ---
 
-## 7. Versioning
+## 7. Using this API in other systems
 
-- **Current API version:** `v1`  
-- Future changes may introduce:
-  - URL versioning (`/api/v2/invoice-extractor`)
-  - Header-based versioning  
+Typical integration patterns:
 
+- Call `/api/invoice-extractor` from:
+  - Python scripts (e.g. ETL jobs, Airflow tasks).
+  - Backend services (Django, .NET, Node.js, etc.).
+  - Low‑code tools (Power Automate, Logic Apps, Zapier via Webhooks).
+- Store the normalized JSON in:
+  - SQL / NoSQL databases.
+  - Data lakes or blob storage.
+- Feed the extracted invoices into:
+  - ERP / accounting systems.
+  - Analytics dashboards.
+  - Automated approval workflows.
+
+This API reference is kept in sync with the current implementation of the **Azure Invoice Extraction Service**. If you change the schema or endpoints, update this document accordingly.
